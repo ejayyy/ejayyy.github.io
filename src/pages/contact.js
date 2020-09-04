@@ -7,7 +7,7 @@ export default function Contact(){
         <div style={{ color: `purple` }}>
             <Link to="/">Home</Link>
             <Header headerText="Contact" />
-            <p>Send us a message<span role="img">🎈</span></p>
+            <p>Send us a message<span role="img" aria-label="">🎈</span></p>
         </div>
     )
 }
