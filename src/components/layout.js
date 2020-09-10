@@ -1,12 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
+import { css } from "@emotion/core"
 
 export default function Layout({ children }) {
     return (
-        <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-            <header style={{ marginBottom: `1.5rem` }}>
+        <div css={css`
+            margin: 3rem auto;
+            max-width: 1350px;
+        `}>
+            <header
+                css={css`
+                margin-bottom: 1.5rem;
+                `}>
                 <Link to="/">
-                    <h3 style={{ display: `inline` }}>MySweetLittleBlog</h3>
+                    <h3>MySweetLittleBlog</h3>
                 </Link>
             </header>
             {children}
