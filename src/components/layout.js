@@ -25,7 +25,7 @@ export default function Layout({ children }) {
                     <div>
                         <Link to="/" css={css`padding:0 0.3rem`}>Develop</Link>
                         <Link to="/" css={css`padding:0 0.3rem`}>Life</Link>
-                        <Link to="/" css={css`padding:0 0.3rem`}>Tag</Link>
+                        <Link to="/tag" css={css`padding:0 0.3rem`}>Tag</Link>
                     </div>
                 </nav>
             </header>
