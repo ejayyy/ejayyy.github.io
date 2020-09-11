@@ -15,7 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.24.56",
+    "gatsby": "^2.24.57",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-offline": "^3.2.27",
@@ -29,7 +29,7 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19"
+    "typography-theme-funston": "^0.16.19"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
