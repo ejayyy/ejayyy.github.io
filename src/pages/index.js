@@ -10,37 +10,35 @@ export default function Home({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <div
-        css={css`
-          display: flex;
-          justify-content: space-between;
+      <div css={css`
+          width: 530px;
+          float: left;
+          padding: 1.5rem;
         `}>
-        <div>
-          <Logo />
-        </div>
-        <div>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link to={node.fields.slug}>
-                <h3
-                  css={css`
+        <Logo />
+      </div>
+      <div>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link to={node.fields.slug}>
+              <h3
+                css={css`
                     margin-top: 0;
                     margin-bottom: ${rhythm(1 / 4)};
                   `}>
-                  {node.frontmatter.title}
-                  <small
-                    css={css`
+                {node.frontmatter.title}
+                <small
+                  css={css`
                       color: #bbb;
                     `}
-                  >
-                    — {node.frontmatter.date}
-                  </small>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
+                >
+                  — {node.frontmatter.date}
+                </small>
+              </h3>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
       </div>
     </Layout>
   )
