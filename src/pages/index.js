@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Logo from "../images/laptop-cat-night.svg"
@@ -20,23 +19,18 @@ export default function Home({ data }) {
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h3
-                css={css`
-                    margin-top: 0;
-                    margin-bottom: ${rhythm(1 / 4)};
-                  `}>
+            <Link to={node.fields.slug} css={{ display: 'inline-block' }}>
+              <h3>
                 {node.frontmatter.title}
                 <small
                   css={css`
-                      color: #bbb;
-                    `}
-                >
+                    opacity: .8
+                    `}>
                   — {node.frontmatter.date}
                 </small>
               </h3>
-              <p>{node.excerpt}</p>
             </Link>
+            <p>{node.excerpt}</p>
           </div>
         ))}
       </div>

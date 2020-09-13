@@ -9,13 +9,16 @@ funston.boldWeight = 600
 funston.paragraphSpaceing = 1.25
 funston.overrideThemeStyles = () => ({
     'h1,h2,h3,h4,h5,h6': {
-        marginBottom: '1rem'
+        margin: '0'
     },
     'a': {
-        textDecoration: 'none'
+        textDecoration: 'none',
+        boxShadow: 'inset 0 -3px 0 #9bc5ec',
+        transition: 'box-shadow .5s, color .2s'
     },
     'a:hover': {
-        textDecoration: 'underline'
+        boxShadow: 'inset 0 -50px 0 #3498DB',
+        color: '#fff'
     }
 })
 

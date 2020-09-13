@@ -2,6 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
+const nonStyle = `
+    box-shadow: none;
+    &:hover{
+        color: initial;
+        box-shadow: none;
+    }
+`
+const menuStyle = `
+    margin: 0.1rem 0.5rem;
+`
+
 export default function Layout({ children }) {
     return (
         <div>
@@ -15,17 +26,16 @@ export default function Layout({ children }) {
                     display: flex;
                     justify-content: space-between;
                     margin: 0 auto;
+                    padding: 0 .5rem;
                     max-width: 1350px;
                 `}>
-                    <Link to="/">
-                        <h3 css={css`
-                            margin: 0;
-                        `}>MySweetLittleBlog</h3>
+                    <Link to="/" css={css`${nonStyle}`}>
+                        <h3>MySweetLittleBlog</h3>
                     </Link>
                     <div>
-                        <Link to="/" css={css`padding:0 0.3rem`}>Develop</Link>
-                        <Link to="/" css={css`padding:0 0.3rem`}>Life</Link>
-                        <Link to="/tag" css={css`padding:0 0.3rem`}>Tag</Link>
+                        <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Develop</Link>
+                        <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Life</Link>
+                        <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
                     </div>
                 </nav>
             </header>
