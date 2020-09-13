@@ -42,6 +42,7 @@ export default function Layout({ children }) {
             <div css={css`
                 margin: 0 auto;
                 max-width: 1350px;
+                padding: 0 .5rem;
            `}>
                 {children}
             </div>
