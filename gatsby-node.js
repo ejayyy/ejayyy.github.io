@@ -6,9 +6,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const fileNode = getNode(node.parent)
-    console.log(`\n`, fileNode.relativePath)
-
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
@@ -16,7 +13,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
   }
-  console.log(`Node created of type '${node.internal.type}'`)
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -50,15 +46,6 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.fields.slug
       }
-    })
-  })
-  result.data.tagsGroup.group.forEach(tag => {
-    createPage({
-      path: `/tag/${_.kebabCase(tag.fieldValue)}/`,
-      component: path.resolve("src/templates/tags.js"),
-      context: {
-        tag: tag.fieldValue,
-      },
     })
   })
 }
