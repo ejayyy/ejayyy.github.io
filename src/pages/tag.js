@@ -2,10 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default function Tags({ data }) {
   return (
     <Layout>
+      <SEO title="Tag" />
       {data.allMarkdownRemark.group.map(group => (
         <div css={css`
           margin-bottom: 1rem;
