@@ -7,8 +7,8 @@ const typography = new Typography({
     paragraphSpaceing: 1.25,
     bodyGray: 11,
     boldWeight: 600,
-    headerFontFamily: ['Youth'],
-    bodyFontFamily: ['SeoulNamsanM'],
+    headerFontFamily: ['Youth', 'sans-serif'],
+    bodyFontFamily: ['SeoulNamsanM', 'sans-serif'],
     overrideThemeStyles: () => ({
         'h1,h2,h3,h4,h5,h6': {
             margin: '0'

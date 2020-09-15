@@ -10,7 +10,8 @@ export default function Home({ data }) {
     <Layout>
       <SEO title="Home" />
       <div css={css`
-          width: 530px;
+          max-width: 530px;
+          width: 100%;
           float: left;
           padding: 1.5rem;
         `}>
