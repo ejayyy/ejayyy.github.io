@@ -40,6 +40,7 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

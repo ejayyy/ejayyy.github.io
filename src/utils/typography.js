@@ -11,18 +11,21 @@ const typography = new Typography({
     bodyFontFamily: ['SeoulNamsanM', 'sans-serif'],
     overrideThemeStyles: () => ({
         'h1,h2,h3,h4,h5,h6': {
-            margin: '0'
+            margin: '.2rem 0'
         },
         'a': {
-            color: '#000',
+            color: 'var(--textNormal)',
             textDecoration: 'none',
-            boxShadow: 'inset 0 -3px 0 #9bc5ec',
+            boxShadow: 'inset 0 -3px 0 var(--linkNormal)',
             transition: 'box-shadow .5s, color .2s'
         },
         'a:hover': {
-            boxShadow: 'inset 0 -50px 0 #3498DB',
-            color: '#fff'
-        }
+            boxShadow: 'inset 0 -50px 0 var(--linkHighlight)',
+            color: 'var(--textRevert)'
+        },
+        hr: {
+            background: 'var(--hr)',
+        },
     })
 }, funston)
 

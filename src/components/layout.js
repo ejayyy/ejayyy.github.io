@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
+import ModeSwitch from './modeSwitch'
 
 const nonStyle = `
     box-shadow: none;
     &:hover{
-        color: initial;
+        color: inherit;
         box-shadow: none;
     }
 `
@@ -15,7 +16,11 @@ const menuStyle = `
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div style={{
+            backgroundColor: 'var(--bg)',
+            color: 'var(--textNormal)',
+            transition: 'color 0.2s ease-out, background 0.2s ease-out',
+        }}>
             <header
                 css={css`
                     padding: 1rem 0;
@@ -33,6 +38,7 @@ export default function Layout({ children }) {
                         <h3>MySweetLittleBlog</h3>
                     </Link>
                     <div>
+                        <ModeSwitch />
                         <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Develop</Link>
                         <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Life</Link>
                         <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>

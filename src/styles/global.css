@@ -14,6 +14,22 @@
     font-display: swap;
 }
 
-html {
-    background-color: lavenderblush;
+body {
+    --bg: lavenderblush;
+    --textNormal: #222;
+    --textRevert: cornsilk;
+    --linkNormal: #9bc5ec;
+    --linkHighlight: #3498DB;
+    --hr: hsla(0, 0%, 0%, 0.2);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+body.dark {
+    --bg: #182525;
+    --textNormal: honeydew;
+    --textRevert: darkslategray;
+    --linkNormal: #4040e6;
+    --linkHighlight: #68bcee;
+    --hr: hsla(0, 0%, 100%, 0.2);
 }
