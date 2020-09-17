@@ -9,21 +9,14 @@ export default function Tags({ data }) {
     <Layout>
       <SEO title="Tag" />
       {data.allMarkdownRemark.group.map(group => (
-        <div css={css`
-          margin-bottom: 1rem;
-        `}>
+        <div css={css`margin-bottom: 1rem;`}>
           <h3>{group.fieldValue} <small>({group.totalCount})</small></h3>
           {group.edges.map(({ node }) => (
             <div key={node.id}>
-              <Link to={node.fields.slug} css={css`
-                display: inline-block;
-              `}>
+              <Link to={node.fields.slug} css={css`display: inline-block;`}>
                 <h4>
                   {node.frontmatter.title}
-                  <small
-                    css={css`
-                    opacity: .8
-                    `}>
+                  <small css={css`opacity: .8`}>
                     — {node.frontmatter.date}
                   </small>
                 </h4>

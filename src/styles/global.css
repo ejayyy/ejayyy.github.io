@@ -14,15 +14,14 @@
     font-display: swap;
 }
 
-body {
+:root{
     --bg: lavenderblush;
     --textNormal: #222;
     --textRevert: cornsilk;
     --linkNormal: #9bc5ec;
     --linkHighlight: #3498DB;
     --hr: hsla(0, 0%, 0%, 0.2);
-    background-color: var(--bg);
-    -webkit-font-smoothing: antialiased;
+    --logo: url('../images/laptop-cat-light.svg');
 }
 
 body.dark {
@@ -32,4 +31,15 @@ body.dark {
     --linkNormal: #4040e6;
     --linkHighlight: #68bcee;
     --hr: hsla(0, 0%, 100%, 0.2);
+    --logo: url('../images/laptop-cat-night.svg');
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--textNormal);
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-logo{
+    content: var(--logo);
 }

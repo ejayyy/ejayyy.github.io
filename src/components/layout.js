@@ -16,11 +16,11 @@ const menuStyle = `
 
 export default function Layout({ children }) {
     return (
-        <div style={{
-            backgroundColor: 'var(--bg)',
+        <div css={css`
+            background-color: 'var(--bg)',
             color: 'var(--textNormal)',
             transition: 'color 0.2s ease-out, background 0.2s ease-out',
-        }}>
+        `}>
             <header
                 css={css`
                     padding: 1rem 0;
@@ -37,11 +37,19 @@ export default function Layout({ children }) {
                     <Link to="/" css={css`${nonStyle}`}>
                         <h3>MySweetLittleBlog</h3>
                     </Link>
-                    <div>
+                    <div css={css`
+                        display: flex;
+                        justify-content: space-between;
+                    `}>
                         <ModeSwitch />
-                        <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Develop</Link>
-                        <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Life</Link>
-                        <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
+                        <div css={css`
+                            @media (max-width: 420px) {
+                                display: none;
+                        }`}>
+                            <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Develop</Link>
+                            <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Life</Link>
+                            <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
+                        </div>
                     </div>
                 </nav>
             </header>

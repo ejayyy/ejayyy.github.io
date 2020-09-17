@@ -13,9 +13,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-react-svg"
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `GatsbyJS`,
