@@ -55,7 +55,7 @@ export default function Layout({ children }) {
             </header>
             <div css={css`
                 margin: 0 auto;
-                max-width: 1350px;
+                max-width: 1000px;
                 padding: 0 .5rem;
            `}>
                 {children}

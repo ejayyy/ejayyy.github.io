@@ -26,6 +26,9 @@ const typography = new Typography({
         hr: {
             background: 'var(--hr)',
         },
+        table: {
+            maxWidth: '800px'
+        }
     })
 }, funston)
 
