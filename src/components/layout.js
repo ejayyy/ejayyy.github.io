@@ -13,6 +13,7 @@ const nonStyle = `
 const menuStyle = `
     margin: 0.1rem 0.5rem;
 `
+const maxWidth = 45
 
 export default function Layout({ children }) {
     return (
@@ -25,17 +26,16 @@ export default function Layout({ children }) {
                 css={css`
                     padding: 1rem 0;
                     margin-bottom: 1.5rem;
-                    border-bottom: 1px solid #DDDDE1;
                     `}>
                 <nav css={css`
                     display: flex;
                     justify-content: space-between;
                     margin: 0 auto;
                     padding: 0 .5rem;
-                    max-width: 1350px;
+                    max-width: ${maxWidth}rem;
                 `}>
                     <Link to="/" css={css`${nonStyle}`}>
-                        <h3>MySweetLittleBlog</h3>
+                        <h3 css={css`margin: 0`}>MySweetLittleBlog</h3>
                     </Link>
                     <div css={css`
                         display: flex;
@@ -55,7 +55,7 @@ export default function Layout({ children }) {
             </header>
             <div css={css`
                 margin: 0 auto;
-                max-width: 1000px;
+                max-width: ${maxWidth}rem;
                 padding: 0 .5rem;
            `}>
                 {children}

@@ -8,13 +8,13 @@ class ModeSwitch extends React.Component {
             <ThemeToggler>
                 {({ theme, toggleTheme }) => {
                     return (
-                        <label>
+                        <label role="img" aria-label="switch dark mode">
                             <input
                                 type="checkbox"
                                 onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                                 checked={theme === 'dark'}
                                 css={css`display:none;`}
-                            /><span role="img" aria-label="switch dark mode">{theme === 'dark' ? '🌞' : '🌚'}</span>
+                            />{theme === 'dark' ? '🌞' : '🌚'}
                         </label>
                     )
                 }}

@@ -8,19 +8,19 @@ export default function Home({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <div css={css`
-                max-width: 530px;
+      <div css={css`margin: 2.5rem auto 0 auto;`}>
+        <div css={css`
+                max-width: 26.5rem;
                 width: 100%;
                 float: left;
-                padding: 1.5rem;
+                padding: 0.5rem;
       `}>
-        <img className={'main-logo'} alt="logo" />
-      </div>
-      <div>
+          <img className={'main-logo'} alt="logo" css={css`margin-bottom: 0`} />
+        </div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug} css={css`display: inline-block`}>
-              <h3>
+              <h3 css={css`margin: 0.2rem`}>
                 {node.frontmatter.title}
                 <small
                   css={css`opacity: .8`}>
