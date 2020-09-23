@@ -14,7 +14,7 @@ export default function Tags({ data }) {
           {group.edges.map(({ node }) => (
             <div key={node.id}>
               <Link to={node.fields.slug} css={css`display: inline-block;`}>
-                <h4>
+                <h4 className={'post-head'}>
                   {node.frontmatter.title}
                   <small css={css`opacity: .8`}>
                     — {node.frontmatter.date}

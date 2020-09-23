@@ -2,7 +2,7 @@
 title: "알고리즘 week 1"
 date: "2020-09-20"
 tags: ["algorithm"]
-------
+---
 
 # UNION-FIND
 최소 선형트리 알고리즘의 서브 루틴
@@ -17,8 +17,8 @@ tags: ["algorithm"]
 ## Quick Find (Eager approach)
 1. Initialize  
   `id[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`  
-  `ary[N]`으로 index == value  
-  N번의 init 
+  index == value  
+  `ary[N]`으로 N번의 init 
 1. Find  
   `return id[p] == id[q]`  
   1번의 비용
@@ -93,6 +93,8 @@ N * N의 격자에는 open, block 상태가 있으며 p의 확률로 열리고 1
 
 침투 여부의 값 n보다 작으면 침투하지 못함
 역치값은 시뮬레이션이 필요한데 union-find로만 가능하다
+
+
 ### Monte carlo simulation
 기본은 모두 닫혀있으며 랜덤으로 오픈된다.  
 0 ~ N<sup>2-1</sup>의 노드를 생성하고 최상단, 최하단에 가상의 노드를 추가한다. _추가 노드없이 탐색하는 경우 N<sup>2</sup>의 탐색 시간이 소요된다_  

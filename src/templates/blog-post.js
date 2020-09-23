@@ -10,14 +10,16 @@ export default function BlogPost({ data }) {
     return (
         <Layout>
             <SEO title={post.frontmatter.title} description={post.excerpt} />
-            <h1 css={css`
-                margin: 2.5rem 0 2rem 0;
-                font-size: 2.5rem;
-                font-weight: 900;
-                stroke-color: var(--textNormal);
-                stroke-width: 1px;
+            <div css={css`margin: 3rem 0`}>
+                <h1 css={css`
+                    margin: 0.75rem 0;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    text-stroke: 2px var(--textNormal);
+                    -webkit-text-stroke: 2px var(--textNormal);
                 `}>{post.frontmatter.title}</h1>
-            <p css={css`margin-top: -1.75rem;`}>{post.frontmatter.date}</p>
+                <p>{post.frontmatter.date}</p>
+            </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </Layout>
     )

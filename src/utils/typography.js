@@ -11,6 +11,11 @@ const typography = new Typography({
     headerFontFamily: ['Youth', 'sans-serif'],
     bodyFontFamily: ['SeoulNamsanM', 'sans-serif'],
     overrideThemeStyles: () => ({
+        body: {
+            'background-color': 'var(--bg)',
+            color: 'var(--textNormal)',
+            '-webkit-font-smoothing': 'antialiased'
+        },
         'h1,h2,h3,h4,h5,h6': {
             margin: '1.25rem 0 1rem 0'
         },
@@ -18,36 +23,46 @@ const typography = new Typography({
             fontSize: `${heading}rem`
         },
         'h2': {
-            fontSize: `${heading-0.3}rem`
+            fontSize: `${heading - 0.3}rem`
         },
         'h3': {
-            fontSize: `${heading-0.6}rem`
+            fontSize: `${heading - 0.6}rem`
         },
         'h4': {
-            fontSize: `${heading-0.9}rem`
+            fontSize: `${heading - 0.9}rem`
         },
         a: {
             color: 'var(--textNormal)',
-            textDecoration: 'none',
-            boxShadow: 'inset 0 -3px 0 var(--linkNormal)',
+            'text-decoration': 'none',
+            'box-shadow': 'inset 0 -3px 0 var(--linkNormal)',
             transition: 'box-shadow .5s, color .2s'
         },
         'a:hover': {
-            boxShadow: 'inset 0 -50px 0 var(--linkHighlight)',
+            'box-shadow': 'inset 0 -50px 0 var(--linkHighlight)',
             color: 'var(--textRevert)'
         },
         hr: {
-            background: 'var(--hr)',
+            'background-color': 'var(--hr)',
         },
         table: {
             maxWidth: '500px'
         },
         'td,th': {
-            borderBottom: '1px solid var(--tableBorder)'
+            'border-bottom': '1px solid var(--tableBorder)'
         },
         li: {
-            marginBottom: 0
-        }
+            'margin-bottom': 0
+        },
+        '.main-logo': {
+            content: 'var(--logo)'
+        },
+        '.post-head': {
+            margin: '0.2rem'
+        },
+        '::selection': {
+            color: 'var(--dragColor)',
+            'background-color': 'var(--dragBackground)'
+        },
     })
 }, funston)
 

@@ -20,7 +20,7 @@ export default function Home({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug} css={css`display: inline-block`}>
-              <h3 css={css`margin: 0.2rem`}>
+              <h3 className={'post-head'}>
                 {node.frontmatter.title}
                 <small
                   css={css`opacity: .8`}>
