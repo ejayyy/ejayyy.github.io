@@ -28,7 +28,7 @@
 }
 
 body.dark {
-    --bg: #182525;
+    --bg: #1d3434;
     --textNormal: honeydew;
     --textRevert: darkslategray;
     --linkNormal: #4040e6;
@@ -42,4 +42,62 @@ body.dark {
 
 body.dark :not(pre)>code[class*="language-"], body.dark pre[class*="language-"] {
     background-color: #161721;
+}
+
+.main-logo {
+    content: var(--logo);
+}
+
+.post-head {
+    margin: 0.2rem;
+}
+
+::selection {
+    color: var(--dragColor);
+    background-color: var(--dragBackground);
+}
+
+blockquote {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--linkNormal);
+    padding: 0.75rem 1.2rem;
+    margin-right: 0;
+}
+
+.tabs-container {
+    display: flex;
+    margin-bottom: 2.2rem;
+}
+
+.tabs-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--linkNormal);
+}
+
+.tabs-label label {
+    display: block;
+    padding: 1rem;
+    color: var(--textNormal);
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+}
+
+input[name="tab"] {
+    display: none;
+}
+
+input[name="tab"]:checked+.tabs-label label {
+    background-color: var(--linkHighlight);
+}
+
+input[name="tab"]:checked+.tab-content {
+    display: block;
 }

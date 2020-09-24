@@ -52,17 +52,7 @@ const typography = new Typography({
         },
         li: {
             'margin-bottom': 0
-        },
-        '.main-logo': {
-            content: 'var(--logo)'
-        },
-        '.post-head': {
-            margin: '0.2rem'
-        },
-        '::selection': {
-            color: 'var(--dragColor)',
-            'background-color': 'var(--dragBackground)'
-        },
+        }
     })
 }, funston)
 
