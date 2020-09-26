@@ -64,6 +64,10 @@ blockquote {
     margin-right: 0;
 }
 
+#disqus_thread {
+    margin: 5rem 0 3rem;
+}
+
 .tabs-container {
     display: flex;
     margin-bottom: 2.2rem;

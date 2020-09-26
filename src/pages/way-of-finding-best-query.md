@@ -102,4 +102,4 @@ OFFSET 0 ROWS FETCH NEXT 100 ROWS ONLY
 
 &nbsp;
 
-어떤 쿼리든 `execution plan`을 보면 view의 테이블 중 백만개의 recode가 들어가있는 테이블의 `clustered index scan`이 cost의 상당수를 잡아먹는다  
+어떤 쿼리든 `execution plan`을 보면 view의 테이블 중 백만개의 record가 들어가있는 테이블의 `clustered index scan`이 cost의 상당수를 잡아먹는다  
