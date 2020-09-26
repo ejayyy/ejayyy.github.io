@@ -88,16 +88,17 @@ blockquote {
     display: none;
     padding: 0.5rem 1rem;
     margin-bottom: 0;
+    width: 100%;
 }
 
-input[name="tab"] {
+.tab {
     display: none;
 }
 
-input[name="tab"]:checked+.tabs-label label {
+.tab:checked+.tabs-label label {
     background-color: var(--linkHighlight);
 }
 
-input[name="tab"]:checked+.tab-content {
+.tab:checked+.tab-content {
     display: block;
 }

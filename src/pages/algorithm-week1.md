@@ -16,19 +16,9 @@ tags: ["algorithm"]
 
 ## Quick Find (Eager approach)
 1. Initialize  
-  <table>
-    <tr>
-      <td>index</td>
-      <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-    </tr>
-    <tr>
-      <td>value</td>
-      <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-    </tr>
-  </table>
   `id[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`  
   index == value  
-  `ary[N]`으로 N번의 init 
+  `ary[N]`으로 N번의 init  
 1. Find  
   `return id[p] == id[q]`  
   노드가 연결됐는지 찾는데 1번의 조회로 해결
@@ -41,6 +31,8 @@ tags: ["algorithm"]
   for(let i=0;i<id.length;i++)
       if(id[i] == id[q]) id[i] = pid
   ```
+
+&nbsp;
 
 ## Quick union (Lazy approach)
 Quick find의 대안. `tree 구조`로 구성된 `forest`
@@ -61,6 +53,8 @@ Quick find의 대안. `tree 구조`로 구성된 `forest`
   `q`의 `root` = `id[5] = id[6] = 6`  
   => `p`의 `root`인 `id[9]`의 값을 `6`으로 바꿔준다  
   최대 `N`번의 접근
+
+&nbsp;
 
 ## 향상된 quick union
 동적 연결성(Dynamic connectivity) 문제를 해결하기 위함
@@ -96,6 +90,8 @@ node p의 `root`를 찾으려면 모든 단계의 노드를 찾아야 함
 node n을 M번 union, find해도 c(N+M log<sup>\*</sup> N) 시간 소요  
  - _log<sup>\*</sup> N : N을 1로 바꾸기 위해 logN을 취해야하는 횟수_
 
+&nbsp;
+
 ## Percolation (침투)
 N * N의 격자에는 `open`, `block` 상태가 있으며 `p`의 확률로 열리고 `1-p`의 확률로 닫힌다  
 격자의 상단에서 하단까지 open된 셀들이 연결되면 percolated된 것이다.
@@ -105,14 +101,14 @@ N * N의 격자에는 `open`, `block` 상태가 있으며 `p`의 확률로 열�
 0 ~ N<sup>2-1</sup>의 노드를 생성하고 최상단, 최하단에 가상의 노드를 추가한다. _추가 노드없이 탐색하는 경우 N<sup>2</sup>의 탐색 시간이 소요된다_
 
 <section class="tabs-container">
-  <input name="tab" id="eng-tab" type="radio" checked />
+  <input class="tab" name="social-tab" id="eng-tab" type="radio" />
   <blockquote class="tab-content">
     <h3>Social network connectivity</h3>
     Assume that the log file is sorted by timestamp and that friendship is an equivalence relation. The running time of your algorithm should be `m log n` or better and use extra space proportional to `n`<br/>
     Given a social network containing `n` members and a log file containing `m` timestamps at which times pairs of members formed friendships, design an algorithm to determine the earliest time at which all members are connected (i.e., every member is a friend of a friend of a friend ... of a friend).<br/>
     Assume that the log file is sorted by timestamp and that friendship is an equivalence relation. The running time of your algorithm should be `m log n` or better and use extra space proportional to `n`.
   </blockquote>
-  <input name="tab" id="kor-tab" type="radio" checked />
+  <input class="tab" name="social-tab" id="kor-tab" type="radio" checked />
   <blockquote class="tab-content">
     <h3>`n`명의 멤버를 가진 소셜 네트워크</h3>
     한 쌍의 멤버들이 우정을 만든 시간에 대한 `m`개의 타임스탬프들이 포함된 로그파일이 있다.<br/>
@@ -126,12 +122,44 @@ N * N의 격자에는 `open`, `block` 상태가 있으며 `p`의 확률로 열�
   </div>
 </section>
 
-> Union-find with specific canonical element. Add a method `find()` to the union-find data type so that `find(i)` returns the largest element in the connected component containing `i`. The operations, `union()`, `connected()`, and 
-`find()` should all take logarithmic time or better.
-For example, if one of the connected components is `{1,2,6,9}`, then the `find()` method should return `9` for each of the four elements in the connected components.
+<section class="tabs-container">
+  <input class="tab" name="tab" id="eng-tab2" type="radio" />
+  <blockquote class="tab-content">
+    Union-find with specific canonical element.<br/>
+    Add a method `find()` to the union-find data type so that `find(i)` returns the largest element in the connected component containing `i`. The operations, `union()`, `connected()`, and `find()` should all take logarithmic time or better.<br/>
+    For example, if one of the connected components is `{1,2,6,9}`, then the `find()` method should return `9` for each of the four elements in the connected components.
+  </blockquote>
+  <input class="tab" name="tab" id="kor-tab2" type="radio" checked />
+  <blockquote class="tab-content">
+    특정한 표준 element와 Union-find가 있다.<br/>
+    UF에 `find()`를 추가하고, `find(i)`는 `i`를 포함하는 연결된 component 중 가장 큰 element를 리턴한다. 해당 연산은 `union()`, `connected()`, `find()`들은 모두 로그 시간 이상이 소요된다.<br/>
+    예시로 연결된 `{1,2,6,9}` component가 있다. `find()`는 연결된 component의 모든 요소 각각에 9를 리턴해야 한다.
+  </blockquote>
+  <div class="tabs-label">
+    <label for="eng-tab2">Eng</label>
+    <label for="kor-tab2">Kor</label>
+  </div>
+</section>
 
-> Successor with delete. Given a set of `n` integers `S={0,1,...,n−1}` and a sequence of requests of the following form:
-> - Remove `x` from `S`
-> - Find the successor of `x`: the smallest `y` in `S` such that `y≥x`
->
-> design a data type so that all operations (except construction) take logarithmic time or better in the worst case.
+<section class="tabs-container">
+  <input class="tab" name="s-tab" id="eng-tab3" type="radio" />
+  <blockquote class="tab-content">
+  <h3>Successor with delete.</h3>
+  Given a set of `n` integers `S={0,1,...,n−1}` and a sequence of requests of the following form:<br/>
+  - Remove `x` from `S`<br/>
+  - Find the successor of `x`: the smallest `y` in `S` such that `y ≥ x`<br/>
+  design a data type so that all operations (except construction) take logarithmic time or better in the worst case.
+  </blockquote>
+  <input class="tab" name="s-tab" id="kor-tab3" type="radio" checked />
+  <blockquote class="tab-content">
+    <h3>삭제와 후처리</h3>
+    `S={0,1,...,n−1}`로 만들어진 n개의 int가 있고 하단의 처리 순서를 따른다.<br/>
+    - `S`에서 `x`를 삭제한다<br/>
+    - `x`의 후처리 : `S`에서 y ≥ x와 같은 가장 작은 `y`를 찾는다.<br/>
+    모든 연산이 최악의 경우 로그 시간 이상을 사용하도록 데이터 유형을 설계한다.
+  </blockquote>
+  <div class="tabs-label">
+    <label for="eng-tab3">Eng</label>
+    <label for="kor-tab3">Kor</label>
+  </div>
+</section>
