@@ -40,16 +40,10 @@ export default function Layout({ children }) {
                     <div css={css`
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                     `}>
                         <ModeSwitch />
-                        <div css={css`
-                            @media (max-width: 420px) {
-                                display: none;
-                        }`}>
-                            <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Develop</Link>
-                            <Link to="/" css={css`${menuStyle} ${nonStyle}`}>Life</Link>
-                            <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
-                        </div>
+                        <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
                     </div>
                 </nav>
             </header>
