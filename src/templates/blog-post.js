@@ -14,7 +14,7 @@ export default function BlogPost({ data }) {
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} description={post.excerpt} />
+            <SEO title={post.frontmatter.title} description={post.frontmatter.spoiler} />
             <div css={css`margin: 3rem 0`}>
                 <h1 css={css`
                     margin: 0.75rem 0;
@@ -38,7 +38,7 @@ query($slug: String!){
         frontmatter{
             title
             date(formatString: "MMMM DD, YYYY")
+            spoiler
         }
-        excerpt
     }
 }`

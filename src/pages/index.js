@@ -28,7 +28,7 @@ export default function Home({ data }) {
                 </small>
               </h3>
             </Link>
-            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.spoiler}</p>
           </div>
         ))}
       </div>
@@ -46,11 +46,11 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MM/DD/YYYY")
+            spoiler
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }

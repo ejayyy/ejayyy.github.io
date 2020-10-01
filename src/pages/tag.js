@@ -9,19 +9,17 @@ export default function Tags({ data }) {
     <Layout>
       <SEO title="Tag" />
       {data.allMarkdownRemark.group.map(group => (
-        <div css={css`margin-bottom: 1rem;`}>
-          <h3>{group.fieldValue} <small>({group.totalCount})</small></h3>
+        <div css={css`margin-bottom: 1.2rem;`}>
+          <h3 css={css`margin-bottom: 0.2rem;`}>{group.fieldValue} <small>({group.totalCount})</small></h3>
           {group.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link to={node.fields.slug} css={css`display: inline-block;`}>
-                <h4 className={'post-head'}>
-                  {node.frontmatter.title}
-                  <small css={css`opacity: .8`}>
-                    — {node.frontmatter.date}
-                  </small>
-                </h4>
-              </Link>
-            </div>
+            <Link key={node.id} to={node.fields.slug} css={css`display: inline-block;`}>
+              <h4 className={'post-head'}>
+                {node.frontmatter.title}
+                <small css={css`opacity: .8`}>
+                  — {node.frontmatter.date}
+                </small>
+              </h4>
+            </Link>
           ))}
         </div>
       ))}
@@ -45,7 +43,6 @@ export const pageQuery = graphql`
             fields {
               slug
             }
-            excerpt
           }
         }
       }
