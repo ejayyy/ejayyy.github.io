@@ -50,6 +50,9 @@ const typography = new Typography({
         'td,th': {
             'border-bottom': '1px solid var(--tableBorder)'
         },
+        p: {
+            'line-height': 1.5
+        }
     })
 }, funston)
 
