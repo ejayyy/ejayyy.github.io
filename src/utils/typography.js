@@ -51,8 +51,9 @@ const typography = new Typography({
             'border-bottom': '1px solid var(--tableBorder)'
         },
         p: {
-            'line-height': 1.5
-        }
+            'line-height': 1.5,
+            'margin-bottom': '2rem'
+        },
     })
 }, funston)
 
