@@ -3,6 +3,7 @@ title: WET CODEBASE - 3
 date: 2020-11-09
 tags: [structure, 번역]
 spoiler: Dan Abramov의 코드 베이스 이야기
+draft: true
 ---
 
 ![costs of abstraction](costs-of-abstraction.PNG)

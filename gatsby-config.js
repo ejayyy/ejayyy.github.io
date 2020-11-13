@@ -12,6 +12,12 @@ module.exports = {
     author: `EJ`,
   },
   plugins: [
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-draft`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,8 +32,6 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,7 +39,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -107,8 +110,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
