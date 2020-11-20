@@ -1,5 +1,5 @@
 ---
-title: WET CODEBASE - 2
+title: WET CODEBASE 2
 date: 2020-11-08
 tags: [structure, 번역]
 spoiler: inline과 추상화

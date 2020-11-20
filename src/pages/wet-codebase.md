@@ -1,5 +1,5 @@
 ---
-title: WET CODEBASE - 1
+title: WET CODEBASE 1
 date: 2020-10-05
 tags: [structure, 번역]
 spoiler: Dan Abramov의 코드 베이스 이야기
