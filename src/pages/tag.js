@@ -32,9 +32,7 @@ export default function Tags({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark (
-      filter: { fields: { draft: { eq: false } } }
-    ){
+    allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}, filter: { fields: { draft: { eq: false } } }){
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

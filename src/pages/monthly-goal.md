@@ -1,15 +1,22 @@
 ---
 title: 월간 목표
-date: 2020-11-04
+date: 2020-11-25
 tags: [life]
-spoiler: 11월의 목표와 10월 회고
+spoiler: 12월의 목표
 ---
+
+# 12월
+## 목표
+1. 운동 3일/1주
+1. 책 2권 읽기
+
+&nbsp;
 
 # 11월
 ## 목표
 1. 운동 3일/1주
 1. 수강 코스 1강 /2주
-1. 책 1권 읽기
+1. ~~책 1권 읽기~~
 1. [Screen free day](https://www.screenfree.org/saturdays/) 1일 갖기
 
 &nbsp;

@@ -10,7 +10,7 @@ export default function Home({ data }) {
       <SEO title="Home" />
       <div css={css`margin: 2.5rem auto 0 auto;`}>
         <div css={css`
-                max-width: 25.5rem;
+                max-width: 24.5rem;
                 width: 100%;
                 float: left;
                 padding: 0.5rem;
