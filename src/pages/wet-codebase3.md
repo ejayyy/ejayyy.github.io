@@ -23,7 +23,7 @@ spoiler: 추상화의 비용
 &nbsp;
 
 더해서 추상화는 당신의 코드 베이스에 무력감을 만듭니다. 이건 기술적인 시선보다는 사회적 문제죠.
-![promising code](../assets/images/wet-base/promising-code.PNG) 전 이해 가능한 추상화와 함께 전도유망하게 시작하는 걸 수없이 봐왔습니다. ![weird code](../assets/images/wet-base/getting-weird-code.PNG) 그 후 시간이 가면 갈수록 복잡해지지만 아무도 이 추상화를 리팩토링하거나 꼬인 코드를 풀어낼 시간이 없습니다. 특히나 당신이 팀의 새로운 사람이라면 말이죠. ![just in mind code](../assets/images/wet-base/just-in-mind-code.PNG) 당신은 복사 붙여넣는 게 더 쉬울거라고 생각하겠지만 코드가 익숙하지 않아 뭘 해야 하는지 모를 겁니다. 두 번째로 당신은 최악의 실천법을 제안하는 사람이 되고 싶지 않습니다. 어느 누가 _그냥 코드를 복사해서 붙여넣는 게 어떤가요?_라고 말하는 사람이 되고 싶은가요? 그 팀에 얼마나 오래 있을거라고 생각합니까?
+![promising code](../assets/images/wet-base/promising-code.PNG) 전 이해 가능한 추상화와 함께 전도유망하게 시작하는 걸 수없이 봐왔습니다. ![weird code](../assets/images/wet-base/getting-weird-code.PNG) 그 후 시간이 가면 갈수록 복잡해지지만 아무도 이 추상화를 리팩토링하거나 꼬인 코드를 풀어낼 시간이 없습니다. 특히나 당신이 팀의 새로운 사람이라면 말이죠. ![just in mind code](../assets/images/wet-base/just-in-mind-code.PNG) 당신은 복사 붙여넣는 게 더 쉬울거라고 생각하겠지만 코드가 익숙하지 않아 뭘 해야 하는지 모를 겁니다. 두 번째로 당신은 최악의 실천법을 제안하는 사람이 되고 싶지 않습니다. 어느 누가 _그냥 코드를 복사해서 붙여넣는 게 어떤가요?_ 라고 말하는 사람이 되고 싶은가요? 그 팀에 얼마나 오래 있을거라고 생각합니까?
 
 &nbsp;
 
