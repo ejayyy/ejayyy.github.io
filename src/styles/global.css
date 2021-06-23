@@ -40,7 +40,8 @@ body.dark {
     --dragBackground: cornflowerblue;
 }
 
-body.dark :not(pre)>code[class*="language-"], body.dark pre[class*="language-"] {
+body.dark :not(pre)>code[class*="language-"],
+body.dark pre[class*="language-"] {
     background-color: #161721;
 }
 
@@ -58,10 +59,10 @@ body.dark :not(pre)>code[class*="language-"], body.dark pre[class*="language-"] 
 }
 
 blockquote {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
     border-left: 5px solid var(--linkNormal);
     padding: 0.75rem 1.2rem;
-    margin-right: 0;
+    margin: 0;
 }
 
 #disqus_thread {
