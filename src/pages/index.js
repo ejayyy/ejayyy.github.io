@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -38,7 +38,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {fields: {draft: {eq: false}}}) {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       totalCount
       edges {
         node {

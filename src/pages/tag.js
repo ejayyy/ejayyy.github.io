@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -32,7 +32,7 @@ export default function Tags({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}, filter: { fields: { draft: { eq: false } } }){
+    allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

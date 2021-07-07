@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { css } from "@emotion/core"
-import ModeSwitch from './modeSwitch'
+import { css } from "@emotion/react"
 
 const nonStyle = `
     box-shadow: none;
@@ -42,7 +41,6 @@ export default function Layout({ children }) {
                         justify-content: space-between;
                         align-items: center;
                     `}>
-                        <ModeSwitch />
                         <Link to="/tag" css={css`${menuStyle} ${nonStyle}`}>Tag</Link>
                     </div>
                 </nav>

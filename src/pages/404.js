@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export default function Lost() {
   return (

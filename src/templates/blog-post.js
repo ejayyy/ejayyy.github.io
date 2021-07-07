@@ -1,16 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { css } from "@emotion/core"
-import Disqus from 'gatsby-plugin-disqus'
+import { css } from "@emotion/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function BlogPost({ data }) {
     const post = data.markdownRemark
-    const disqusConfig = {
-        identifier: post.id,
-        title: post.title,
-    }
 
     return (
         <Layout>
@@ -26,7 +21,6 @@ export default function BlogPost({ data }) {
                 <p>{post.frontmatter.date}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <Disqus config={disqusConfig} />
         </Layout>
     )
 }
