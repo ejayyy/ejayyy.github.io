@@ -11,7 +11,7 @@ export default function BlogPost({ data }) {
         <Layout>
             <SEO title={post.frontmatter.title} description={post.frontmatter.spoiler} />
             <div css={css`margin: 3rem 0`}>
-                <h1 css={css`
+                <h1 id="post-header" css={css`
                     margin: 0.75rem 0;
                     font-size: 2.5rem;
                     font-weight: 900;
@@ -21,6 +21,7 @@ export default function BlogPost({ data }) {
                 <p>{post.frontmatter.date}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         </Layout>
     )
 }
@@ -28,6 +29,7 @@ export default function BlogPost({ data }) {
 export const query = graphql`
 query($slug: String!){
     markdownRemark(fields:{slug:{eq:$slug}}){
+        tableOfContents
         html
         frontmatter{
             title
