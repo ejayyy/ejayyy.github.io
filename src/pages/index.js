@@ -38,7 +38,10 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___date, order: DESC}
+      filter: {frontmatter: {draft: {ne: true}}}
+    ) {
       totalCount
       edges {
         node {
