@@ -65,45 +65,6 @@ blockquote {
     margin: 0.5rem;
 }
 
-.tabs-container {
-    display: flex;
-    margin-bottom: 2.2rem;
-}
-
-.tabs-label {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: var(--linkNormal);
-}
-
-.tabs-label label {
-    display: block;
-    padding: 1rem;
-    color: var(--textNormal);
-    cursor: pointer;
-    user-select: none;
-}
-
-.tab-content {
-    display: none;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0;
-    width: 100%;
-}
-
-.tab {
-    display: none;
-}
-
-.tab:checked+.tabs-label label {
-    background-color: var(--linkHighlight);
-}
-
-.tab:checked+.tab-content {
-    display: block;
-}
-
 h1 a,
 h2 a,
 h3 a,
