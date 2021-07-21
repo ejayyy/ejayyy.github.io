@@ -5,7 +5,7 @@ tags: [structure, 번역]
 spoiler: 추상화와 실제적 예시들
 ---
 
-![specific test](../assets/images/wet-base/new-test.PNG)
+![specific test](../assets/image/post/wet-base/new-test.PNG)
 하지만 타임머신을 타고 돌아간다면 유닛테스트나 통합 테스트, 오늘날 유행하는 테스트, 당신이 하고 싶은 어떤 테스트든 실제로 신경 쓰는 코드에 대한 구체적인 기능에 관련된 동작을 하겠죠. 그렇게 추상화는 고려하지 않은 테스트들이 있음으로써 `inline` 추상화를 돌려놓을 수 있겠죠. 당신은 5계층의 추상화를 만들 수 있습니다. 테스트는 코드가 동작하든 말든 결과를 보여주겠죠. 테스트는 당신의 리팩토링이 정확한지 알려줄 수 있기 때문에 리팩터 가이드가 될 겁니다. 그러니 구체적인 코드를 테스트하는 건 좋은 전략입니다.
 
 &nbsp;
@@ -14,19 +14,19 @@ spoiler: 추상화와 실제적 예시들
 
 &nbsp;
 
-![inline it](../assets/images/wet-base/inline-it.PNG)
+![inline it](../assets/image/post/wet-base/inline-it.PNG)
 마지막으로, 문제가 일어나거나 실수하거나 팀 문화의 일부가 그렇게 해도 괜찮다거나 추상화가 나쁘다고 해도 이건 중요하다고 생각합니다. 우린 그걸 없앨 필요가 있습니다. 당신이 추상화를 추가할 뿐만 아니라 건강한 개발 프로세스의 일부를 위해 삭제해야 하죠. 그래서 이건 _저기 이건 통제 범위 밖이야_라고 코멘트를 남겨놔도 괜찮을 거란 뜻입니다. 가끔 복사 붙여넣기에 시간을 보내고 나중에 어떻게 하면 좋을지 생각해보죠.
 
 &nbsp;
 
-![enhanced structure](../assets/images/wet-base/enhanced-structure.PNG)
+![enhanced structure](../assets/image/post/wet-base/enhanced-structure.PNG)
 하지만 여긴 기술적인 요소가 또 있죠. 당신의 의존성 트리가 이것과 같아 보인다면 어떤 거든 `inline` 하기 꽤 힘들 수도 있습니다. 음, 전 `inline`을 하고 싶은 게 있고 복사할 수 있지만 변하기 쉬운 `공유 state`를 복제되기로 했다면 모든 의존성을 어떻게 다시 함께 쓸 수 있는지 알아낼 필요가 있습니다. 이건 아마도 실현할 수 없을지도 모르죠. 그저 포기할 겁니다. 전 정말 좋은 해결책을 모르겠어요. 제가 알아차린 건 어떤 코드에선 정말 피할 수 없다는 겁니다. 예를 들어 `리액트`에 어떤 소스 코드가 있고 당신이 변형시키면 안 되는걸 변형시키려 하는 문제점이 있습니다. 그래서 이해하기 어려울 수 있는 모듈 간의 상호 의존성을 모두 가지게 되었습니다.
 
 &nbsp;
 
-![let's change structure](../assets/images/wet-base/change-structure.PNG)
+![let's change structure](../assets/image/post/wet-base/change-structure.PNG)
 하지만 `리액트`의 멋진 점은 앱과 의존성 트리가 이것과 더 비슷하게 만들 수있습니다. 그래서 `button component`는 `form`에서 사용되고 `form`은 `app`에서 사용되는 거죠. 이렇게 트리 모양으로요. 우린 한쪽으로만 데이터가 흘러가는 제약조건을 가지고 있습니다. 당신은 이상한 순환계를 만들거라고 예상하지 못하죠. 이 의미는 당신이 실수를 할것이고, 잘못된 추상화를 만들거라는 뜻이죠. 하지만 당신의 기술이 이런걸 없애기 더 수월하게 될까요?
-![not too late](../assets/images/wet-base/too-late.PNG)
+![not too late](../assets/image/post/wet-base/too-late.PNG)
 
 &nbsp;
 
@@ -34,12 +34,12 @@ spoiler: 추상화와 실제적 예시들
 
 &nbsp;
 
-![good ideas](../assets/images/wet-base/good-idea.PNG)
+![good ideas](../assets/image/post/wet-base/good-idea.PNG)
 이 분야에 진입하는 개발자, 아니면 15년 동안 일을 하다가 몇 달 동안 나와 있던 사람으로서 좋은 발상들을 많이 들었을 겁니다. 우리는 이런 걸 전파하려는 전도 활동을 자주 봅니다. 괜찮아요. 하지만 이게 어떤 동작을 하는지, 왜 좋은 아이디어인지 말하려고 할 때, 정확히 어떤 걸 거래하고 어떤 게 그 원칙이나 발상으로 이끌었는지 설명하는 게 중요하다고 생각합니다. 이런 문제들의 유통기한은 언제일까요? 실제로 바뀌었지만, 아직 있다고 가정되는 당신이 깨닫지 못한 전후 사정_(context)_들이 가끔가다 있기 때문이죠. 그러니까 다음 세대는 정확히 어떤 걸 맞바꾸었는지, 왜 그랬는지 이해할 필요가 있습니다.
 
 &nbsp;
 
-![see also](../assets/images/wet-base/see-also.PNG)
+![see also](../assets/image/post/wet-base/see-also.PNG)
 누군가가 말해줬거나 당신이 생각해낸 경험에 따라 항상 맞는다고 강하게 믿는 어떤 모범 사례와 안티 패턴을 골라서 왜 신뢰하는지, 정확히 어떤 게 오가는지 분해하고 해체하려고 노력하는 것이 당신을 위한 제 챌린지입니다. 이 강연에서 재미를 찾았다면 다른 토크들도 좋아할 수 있습니다. `Sandi Metz`의 `All the Little Things`는 이런 주제와 여러 가지 다른 발상들에 대해 더 자세히 설명하는 놀라운 강연입니다. `Minimal API Surface Area`는 제게 이 모든 걸 가르쳐준 동료 `Sebastian`의 강연입니다. 그리고 `On the Spectrum of Abstraction`은 어떻게 추상화가 제약조건에 대한 표현력과 힘을 교환하는 데 도움이 되는지, 어떻게 제약조건이 실제로 우리를 제한하는지, 다른 방식으로는 안 되는걸 제약조건은 어떻게 할 수 있게 만드는지에 관한 `Cheng Lou`의 흥미로운 강연입니다.  
 좋은 이야기였습니다. 반겨주셔서 감사합니다. 이게 제가 아는 전부입니다.
 

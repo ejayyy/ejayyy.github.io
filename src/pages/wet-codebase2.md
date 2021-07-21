@@ -5,14 +5,14 @@ tags: [structure, 번역]
 spoiler: inline과 추상화
 ---
 
-![time machine](../assets/images/wet-base/time-travel.PNG)
+![time machine](../assets/image/post/wet-base/time-travel.PNG)
 만약 타임머신이 있다면 과거로 돌아가서 고칠 수 있을 거예요, 그렇죠? 전 추상화가 아직 의미 있었던 곳으로 돌아가고 싶습니다. 예상치 못한 케이스가 있고, 조금 다른 게 필요하더라도 우린 코드를 복제하기 정말 싫었습니다. 그리고 네, 물론 추상화를 보완, 보충하면서 이상하게 완성되겠죠. 지금의 내가 거기 있었다면 제발 이 추상화를 바로 처리(_`inline`_)하라고 말할 겁니다.
 
 &nbsp;
 
-![duplicate code](../assets/images/wet-base/duplicated-code.PNG)
+![duplicate code](../assets/image/post/wet-base/duplicated-code.PNG)
 `inline`은 말 그대로 코드를 가져와서 붙여넣는 것을 뜻합니다. 약간의 중복을 만들지만 개발하다가 만들 수 있는 괴물을 파괴합니다. 당연히 복제는 장기적으로 완벽하지 않지만 잘못된 추상화 또한 장기적으로 완벽하지 않습니다. 따라서 우리는 2가지 문제의 균형을 잡아야 합니다. 만일 버그가 있고, 어떤게 사실 다른 일을 해야 한다고 깨달았다면 이 방법은 그냥 우리가 바꿀 수 있게 도움을 줍니다. 독립되어있기 때문에 다른 위치에 영향을 끼치지 않습니다. 비슷하게 다른 버그가 생겨 다시 변경해야 할 수도 있겠죠.
-![new changes](../assets/images/wet-base/inlined-code.jpg)
+![new changes](../assets/image/post/wet-base/inlined-code.jpg)
 
 &nbsp;
 
@@ -20,7 +20,7 @@ spoiler: inline과 추상화
 
 &nbsp;
 
-![self perpetuating loop](../assets/images/wet-base/gen-to-gen.PNG)
+![self perpetuating loop](../assets/image/post/wet-base/gen-to-gen.PNG)
 그리고 제가 보기에 이건 사실상 자기 자신에 의해 영원히 계속되는(_self-perpetuating_) 순환입니다. 개발자들은 경험에서 우러나온 실제 문제들과 해결법들이 있기 때문에 이전 세대의 모범 사례들을 배우고 따르려 합니다. 하지만 모든 전후 사정과 균형 관계를 설명하기는 어렵기 때문에 모범 예제들의 발상과 안티패턴은 단일화됩니다.
 
 &nbsp;
@@ -34,7 +34,7 @@ spoiler: inline과 추상화
 
 &nbsp;
 
-![benefits of abstraction](../assets/images/wet-base/benefits-of-abstraction.PNG)
+![benefits of abstraction](../assets/image/post/wet-base/benefits-of-abstraction.PNG)
 특정 계층에 집중할 수 있는 건 정말 좋습니다. 코드를 여러 장소에 가지고 있고 어떤 이메일을 보낸 뒤 _이메일이 어떻게 보내지는지 알고 싶지 않을 때 말이죠._ 심지어 메일이 도착하는 게 저에겐 의문입니다. 하지만 전 이메일을 보내는 함수를 호출할 수 있고 거의 모든 시도에 동작합니다. 하나에 집중하기 정말 좋은 거죠. 또 다른 이점은 당신이나 다른 사람이 만든 코드를 재사용할 수 있고 실제로 어떻게 동작하는지 기억할 필요가 없다는 점입니다.
 
 &nbsp;

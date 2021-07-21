@@ -19,7 +19,7 @@ module.exports = {
                 background_color: `#6b37bf`,
                 theme_color: `#6b37bf`,
                 display: `standalone`,
-                icon: `src/images/icon.png`,
+                icon: `src/assets/image/logo/icon.png`,
             },
         },
         {
@@ -75,7 +75,7 @@ module.exports = {
             resolve: `gatsby-plugin-typography`,
             options: {
                 omitGoogleFont: true,
-                pathToConfigModule: `src/utils/typography`,
+                pathToConfigModule: `src/assets/typography`,
             },
         },
     ],
