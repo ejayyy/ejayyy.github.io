@@ -11,10 +11,11 @@ const typography = new Typography({
     headerFontFamily: ['Youth', 'sans-serif'],
     bodyFontFamily: ['SeoulNamsanM', 'sans-serif'],
     overrideThemeStyles: () => ({
-        body: {
-            'background-color': 'var(--bg)',
-            color: 'var(--textNormal)',
-            '-webkit-font-smoothing': 'antialiased'
+        blockquote: {
+            'background-color': 'rgba(0, 0, 0, 0.1)',
+            'border-left': '5px solid var(--linkNormal)',
+            padding: '0.7rem 1.2rem',
+            margin: '0.5rem'
         },
         'h1,h2,h3,h4,h5,h6': {
             margin: '1.25rem 0 1rem 0'
@@ -30,6 +31,11 @@ const typography = new Typography({
         },
         'h4': {
             fontSize: `${heading - 0.9}rem`
+        },
+        'h1 a, h2 a, h3 a, aside a': {
+            'box-shadow': 'none!important',
+            transition: 'none',
+            color: 'initial!important',
         },
         a: {
             color: 'var(--textNormal)',
@@ -51,7 +57,7 @@ const typography = new Typography({
             'border-bottom': '1px solid var(--tableBorder)'
         },
         p: {
-            'line-height': 1.5,
+            'line-height': 1.6,
             'margin-bottom': '2rem'
         },
     })
