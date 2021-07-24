@@ -2,7 +2,7 @@
 title: 월간 목표
 date: 2021-07-22
 tags: [life]
-spoiler: 8월
+spoiler: 내 생일 8월
 ---
 
 # August
