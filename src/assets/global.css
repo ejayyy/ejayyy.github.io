@@ -57,3 +57,13 @@ body.dark pre[class*="language-"] {
     color: var(--dragColor);
     background-color: var(--dragBackground);
 }
+
+input[type="checkbox"]:checked::before {
+    content: 'v';
+    position: absolute;
+    top: -0.2em;
+    left: 0.1em;
+    color: snow;
+    font-size: 1.1em;
+    font-weight: 900;
+}

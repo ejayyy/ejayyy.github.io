@@ -60,6 +60,20 @@ const typography = new Typography({
             'line-height': 1.6,
             'margin-bottom': '2rem'
         },
+        'input[type="checkbox"]': {
+            appearance: 'none',
+            '-moz-appearance': 'none',
+            '-webkit-appearance': 'none',
+            position: 'relative',
+            width: '1em',
+            height: '1em',
+            border: '0.1em solid lightblue',
+            'border-radius': '0.25em',
+            'vertical-align': 'text-top',
+        },
+        'input[type="checkbox"]:checked': {
+            'background-color': 'slateblue',
+        }
     })
 }, funston)
 
