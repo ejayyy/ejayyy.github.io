@@ -79,4 +79,4 @@ John Maynard keynes는 대공황 시기에 집필한 General theory에서 '투�
 &nbsp;
 
 ## 출처
-> [Tim O’Reilly, The End of Silicon Valley as We Know It?](https://www.oreilly.com/radar/the-end-of-silicon-valley-as-we-know-it/) O'REILLY 3/11,2021
+> Tim O’Reilly, [The End of Silicon Valley as We Know It?](https://www.oreilly.com/radar/the-end-of-silicon-valley-as-we-know-it/) O'REILLY 3/11,2021

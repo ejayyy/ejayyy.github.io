@@ -92,6 +92,6 @@ spoiler: 왜하냐
 
 &nbsp;
 
-## 출처
+# 출처
 > Agile Manifesto, [Manifesto for Agile Software Development](https://agilemanifesto.org/)  
 > Adobe Workfront, [What is the daily stand-up meeting in Agile?](https://www.workfront.com/project-management/methodologies/agile/daily-stand-up)
