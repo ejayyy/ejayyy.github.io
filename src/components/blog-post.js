@@ -31,6 +31,7 @@ export default function BlogPost({ data }) {
                     <p>{post.frontmatter.date}</p>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div id="vc-feelback-main" data-access-token="3b1c367068a84e0c870dcd49b5b5fb37" data-display-type="4"></div>
             </main>
         </Layout>
     )
