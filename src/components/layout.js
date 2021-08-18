@@ -52,6 +52,13 @@ export default function Layout({ children }) {
            `}>
                 {children}
             </div>
+            <footer css={css`
+                padding: 3rem;
+                text-align: center;
+                background: #f0f8ff91;
+            `}>
+                <a href="github.com/ejayyy" target="_blank">GitHub</a>
+            </footer>
         </div>
     )
 }
