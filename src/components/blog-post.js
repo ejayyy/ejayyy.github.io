@@ -40,8 +40,12 @@ export default function BlogPost({ data }) {
                 `}>{post.frontmatter.title}</h1>
                     <p>{post.frontmatter.date}</p>
                 </section>
-                <section dangerouslySetInnerHTML={{ __html: post.html }} />
-                <section css={css`margin: 1rem 0.5rem`}>
+                <section css={css`
+                    @media (max-width: 45rem) {
+                        margin: 0 1rem;
+                    }
+                `} dangerouslySetInnerHTML={{ __html: post.html }} />
+                <section css={css`margin: 5rem 0.5rem 0`}>
                     <div id="vc-feelback-main" data-access-token="3b1c367068a84e0c870dcd49b5b5fb37" data-display-type="4"></div>
                 </section>
             </article>
