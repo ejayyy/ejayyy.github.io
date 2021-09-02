@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-blog-post-js",
+    "path": "/ui-ux/",
+    "result": {"data":{"markdownRemark":{"tableOfContents":"","html":"<p>때는 2010년대 <code class=\"language-jstext\">Bootstrap 3</code>이 풍미하고 있던 시절,<br>\n부가 유료 theme없이 네이티브만으로도 멋지던 그 때.</p>\n<p> </p>\n<p>아직 그 디자인을 사용하는 프로젝트가 있다면 어떨까?<br>\n<em>믿기지 않겠지만 많다.</em></p>\n<ol>\n<li>레거시 사랑<br>\n이정도 되면 그냥 회사까기 같지만 레거시 사랑은 끝이없다.<br>\n아직 누가 3을 쓰고 있을까..?<br>\n심지어 새로운 프로젝트에도 쓴다하면 어떨까?<br>\n부트스트랩도 이런 처지가 불쌍해서 버전 3 페이지를 종료하지 않는게 아닐까?</li>\n<li>레이아웃?<br>\n바뀐건 없다<br>\n과거의 영광이 프로젝트화된다면 이걸까?</li>\n<li>플러그인..<br>\n아직도 플러그인이 서비스 되나요?<br>\n찾는다는 사실이 현타가 온다</li>\n<li>버전업 문제<br>\n이미 통째로 이식했기에 연관된 스크립트가 쌔고 쌨다 (aka 불가능)<br>\n최신버전 넣었다가 뒷목잡고 포기했습니다</li>\n</ol>\n<p> </p>\n<p>사실 프레임워크의 버전이 중요한게 아니다. <em>중요하지만</em><br>\n버전 업 마저도 하지않는 의지<br>\n줄 간격 조차 안 맞추는 개념..</p>\n<p>답이 없는 회사<br>\n그걸 지켜보는 나<br>\n전쟁같은 회의<br>\n피로가 몰려온다</p>","frontmatter":{"title":"그의 페이지는 2010년대를 넘지 못한다","date":"August 18, 2021","spoiler":"최신 버전 넣었다가 뒷목잡고 포기했습니다"}}},"pageContext":{"slug":"/ui-ux/"}},
+    "staticQueryHashes": ["63159454"]}
