@@ -17,9 +17,9 @@ const maxWidth = 45
 export default function Layout({ children }) {
     return (
         <div css={css`
-            background-color: 'var(--bg)',
-            color: 'var(--textNormal)',
-            transition: 'color 0.2s ease-out, background 0.2s ease-out',
+            background-color: var(--bg);
+            color: var(--textNormal);
+            transition: color 0.2s ease-out, background 0.2s ease-out;
         `}>
             <header
                 css={css`
@@ -45,19 +45,19 @@ export default function Layout({ children }) {
                     </div>
                 </nav>
             </header>
-            <div css={css`
+            <main css={css`
                 margin: 0 auto;
                 max-width: ${maxWidth}rem;
                 padding: 0 .5rem;
            `}>
                 {children}
-            </div>
+            </main>
             <footer css={css`
                 padding: 3rem;
                 text-align: center;
                 background: #f0f8ff91;
             `}>
-                <a href="github.com/ejayyy" target="_blank">GitHub</a>
+                <a href="https://github.com/ejayyy" target="_blank">GitHub</a>
             </footer>
         </div>
     )
