@@ -49,6 +49,7 @@ export default function Layout({ children }) {
                 margin: 0 auto;
                 max-width: ${maxWidth}rem;
                 padding: 0 .5rem;
+                min-height: 100vh;
            `}>
                 {children}
             </main>
