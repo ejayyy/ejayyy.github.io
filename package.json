@@ -6,7 +6,7 @@
     "scripts": {
         "deploy": "gatsby build && gh-pages -d public",
         "build": "gatsby build",
-        "develop": "gatsby develop",
+        "develop": "gatsby develop -H $(hostname -I)",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
         "start": "npm run develop",
         "serve": "gatsby serve",
