@@ -23,3 +23,35 @@ The one-liner code
 ```java
 System.out.println(grade < 38 || grade % 5 < 3 ? grade : grade + (5 - (grade % 5)));
 ```
+
+
+# 2. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
+> Find the longest common prefix string amongst an array of strings.
+> 
+> Example 1: `strs = ["flower","flow","flight"]`
+> Output: `"fl"`
+>
+> Example 2: `strs = ["dog","racecar","car"]`
+> Output: `""`
+
+## answer
+```js
+...(strs) => {
+    var i = 0; j = 1, prefix = '';
+
+    while (i < strs[0].length) {
+        j = 0
+        while (j < strs.length) {
+            if (i === strs[j].length || strs[0][i] !== strs[j][i]) {
+                return prefix
+            }
+            j++
+        }
+        if (j === strs.length) {
+            prefix += strs[0][i]
+        }
+        i++
+    }
+    return prefix
+}
+```
