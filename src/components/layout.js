@@ -58,7 +58,7 @@ export default function Layout({ children }) {
                 text-align: center;
                 background: #f0f8ff91;
             `}>
-                <a href="https://github.com/ejayyy" target="_blank">GitHub</a>
+                <a href="https://github.com/ejayyy" target="_blank" rel="noreferrer">GitHub</a>
             </footer>
         </div>
     )
