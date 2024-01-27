@@ -1,1 +1,0 @@
-(function () { var v = document.createElement("script"); v.async = true; v.src = "https://assets-prod.vicomi.com/vicomi.js?token=3b1c367068a84e0c870dcd49b5b5fb37"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(v, s); })();
