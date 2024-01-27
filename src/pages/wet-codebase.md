@@ -31,7 +31,7 @@ spoiler: Dan Abramov의 코드 베이스 이야기
 
 &nbsp;
 
-![bug in the code](../assets/image/post/wet-base/bug-in-the-code.PNG)
+![bug in the code](../assets/image/post/wet-base/bug-in-the-code.png)
 다음 찾아낸 일은 새 코드, 새 기능에 버그가 있었습니다. 정확히 똑같은 코드가 필요하다고 생각했지만 사실 조금 다른 것이 필요해서 생긴 버그였죠. 새로운 케이스를 추가하여 당연히 버그를 고칠 수 있었고 우리의 추상화는 `if문`을 가질 수 있습니다. 만일 이게 특이 케이스라면 다른 작업을 해야 합니다. 네, 두 개를 연결하면 좋을 겁니다. 왜냐면 모든 추상화에서 일어나는 일이기 때문이죠. 그렇잖아요?
 
 &nbsp;
@@ -41,7 +41,7 @@ spoiler: Dan Abramov의 코드 베이스 이야기
 
 &nbsp;
 
-![new new abstraction](../assets/image/post/wet-base/new-new-abstraction.PNG)
+![new new abstraction](../assets/image/post/wet-base/new-new-abstraction.png)
 실제 use case들에 속해있던 추상화를 모두 빼냈습니다. 보기엔 이렇습니다. 이제 추상화는 모든 실제 케이스들과 무관합니다. 정말 일반적이고 아주 아름답죠. 아무도 이게 어떤 걸 대표하는지 더이상 알지못합니다. 아, 그건 그렇고 이제 다른 위치에서 매개 변수화되었으니 모든 코드 사이즈에서 매개 변수화되었는지 반드시 확인해야 합니다.
 
 &nbsp;
@@ -50,5 +50,5 @@ spoiler: Dan Abramov의 코드 베이스 이야기
 
 &nbsp;
 
-![ultimate abstraction](../assets/image/post/wet-base/ended-up-this.PNG)
+![ultimate abstraction](../assets/image/post/wet-base/ended-up-this.png)
 다시 말하지만 각 단계에서는 나름대로 괜찮았습니다. 하지만 원래 하려던 일을 놓친다면, 순환적인 종속성(_cyclical dependency_)이 있는데 모른다거나 구석진 곳에서 이상한 게 자라나는 사실을 모르게 됩니다. 단지 큰 그림을 더는 못 볼 뿐인데 말이죠. 당연히 실생활에서는 아무도 코드 베이스를 건들지 않을 것이고 긴 시간 동안 썩어있던 코드를 누군가가 새로 짜면서 이야기는 끝났겠죠. 그리고 아마도 승진했을 겁니다. 모르죠.
