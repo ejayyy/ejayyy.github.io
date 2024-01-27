@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/react"
+import { Link } from "gatsby"
 
 export default function Footer({ maxWidth }) {
     return (
@@ -10,6 +11,7 @@ export default function Footer({ maxWidth }) {
                 margin: 0 auto;
                 padding: 3rem 0;
             `}>
+            <Link to="/portfolio">Portfolio</Link>
             <a href="https://github.com/ejayyy" target="_blank" rel="noreferrer">
                 <img className="logo github" alt="logo" />
                 GitHub
