@@ -18,12 +18,16 @@ tags: ["WSL"]
 - Count files : `ls | wc -l`
 
 ### Install PHP, apache, [laravel](https://laravel.com/docs/7.x/installation)
-- `sudo apt install -y php libapache2-mod-php`
-- `php --ini`
-- `sudo apt install -y composer`
-- `composer global require laravel/installer`
-- `composer global about`
+```bash
+sudo apt install -y php libapache2-mod-php
+php --ini
+sudo apt install -y composer
+composer global require laravel/installer
+composer global about
+```
 
 ### Start laravel
-- `composer create-project --prefer-dist laravel/laravel [name]`
-- `php artisan serve`
+```bash
+composer create-project --prefer-dist laravel/laravel $NAME
+php artisan serve
+```

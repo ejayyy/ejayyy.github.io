@@ -7,14 +7,17 @@ date: 2019-10-31
 - `/System/Volumes/Data/usr/local/var/postgres/pg_hba.conf`
 
 ### Start
-- `brew tap homebrew/services`
-- `brew services [start/stop/restart] postgresql`
+```bash
+brew tap homebrew/services
+brew services [start/stop/restart] postgresql
+```
 
 ### Database
-- `createdb/dropdb [name]`
-- `psql [db name] [user name]`
-- `create user [name] with password '[pwd]';`
-- `exit` or `\q`
+```bash
+createdb/dropdb $name
+psql $DB_NAME $USER_NAME
+create user $NAME with password $PWD
+```
 
 ### Check the status
 - `\c` : `You are now connected to database "[name]" as user "[name]".`
