@@ -18,6 +18,10 @@ body {
     font-style: normal;
     font-display: swap;
     margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--textNormal);
+    transition: color 0.2s ease-out, background 0.2s ease-out;
 }
 
 body.dark {
@@ -202,6 +206,9 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 45rem) {
+    body {
+        padding: 0 1rem;
+    }
 
     .post-body h1,
     .post-body h2,
