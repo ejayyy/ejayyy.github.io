@@ -50,8 +50,13 @@ blockquote {
     margin: 0.5rem;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+p {
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
     margin-bottom: 0;
 }
 
@@ -109,20 +114,38 @@ td, th {
     border-bottom: 1px solid var(--tableBorder);
 }
 
+:not(pre)>code {
+    white-space: break-spaces !important;
+    word-break: break-word !important;
+}
+
 input[type="checkbox"] {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     position: relative;
     width: 1em;
     height: 1em;
-    border: 0.1em solid lightblue;
-    border-radius: 0.25em;
+    margin-top: .25em;
+    vertical-align: top;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid lightgray;
+    border-radius: .25em;
     vertical-align: middle;
 }
 
 input[type="checkbox"]:checked {
     background-color: slateblue;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "X";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: snow;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 .main-logo {
@@ -155,5 +178,26 @@ input[type="checkbox"]:checked {
 .post-body h5,
 .post-body h6 {
     margin-top: 1.7rem;
-    margin-bottom: .3rem;
+    margin-bottom: .2rem;
+}
+
+@media (max-width: 45rem) {
+
+    .post-body h1,
+    .post-body h2,
+    .post-body h3,
+    .post-body h4,
+    .post-body h5,
+    .post-body h6 {
+        margin-left: 1rem;
+    }
+
+    .post-body h1 .anchor svg,
+    .post-body h2 .anchor svg,
+    .post-body h3 .anchor svg,
+    .post-body h4 .anchor svg,
+    .post-body h5 .anchor svg,
+    .post-body h6 .anchor svg {
+        visibility: visible;
+    }
 }

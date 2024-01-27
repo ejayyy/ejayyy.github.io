@@ -20,6 +20,9 @@ export default function Layout({ children }) {
             background-color: var(--bg);
             color: var(--textNormal);
             transition: color 0.2s ease-out, background 0.2s ease-out;
+            @media (max-width: 45rem) {
+                padding: 0 1rem;
+            }
         `}>
             <header
                 css={css`
