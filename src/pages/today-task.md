@@ -1,6 +1,7 @@
 ---
 title:  "Today's tasks"
 date: 2019-09-17
+draft: true
 ---
 
 ### SSL Certificate

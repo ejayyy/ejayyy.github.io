@@ -2,6 +2,7 @@
 title: Today I learned
 date: 2019-09-10
 tags: ["css", "shopify"]
+draft: true
 ---
 ### Dropdown menu
 - [Hoverable menu](https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text)

@@ -1,6 +1,7 @@
 ---
 title: VIM
 date: 2020-08-19
+draft: true
 ---
 ### vim
 - `:set number`
