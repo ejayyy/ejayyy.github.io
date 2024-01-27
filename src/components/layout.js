@@ -7,6 +7,7 @@ const nonStyle = `
     &:hover{
         color: inherit;
         box-shadow: none;
+        text-decoration: underline;
     }
 `
 const menuStyle = `
@@ -54,11 +55,24 @@ export default function Layout({ children }) {
                 {children}
             </main>
             <footer css={css`
+                display: flex;
+                justify-content: space-around;
+                max-width: ${maxWidth}rem;
+                margin: 0 auto;
                 padding: 3rem 0;
-                text-align: center;
-                background: #f0f8ff91;
             `}>
-                <a href="https://github.com/ejayyy" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://github.com/ejayyy" target="_blank" rel="noreferrer" css={css`${nonStyle}`}>
+                    <img className="logo github" alt="logo" />
+                    GitHub
+                </a>
+                <a href="https://leetcode.com/ejayyy/" target="_blank" rel="noreferrer" css={css`${nonStyle}`}>
+                    <img className="logo leetcode" alt="logo" />
+                    Leetcode
+                </a>
+                <a href="https://ejayyy.github.io/blog/" target="_blank" rel="noreferrer" css={css`${nonStyle}`}>
+                    <img className="logo blog" alt="logo" />
+                    Previous Blog
+                </a>
             </footer>
         </div>
     )

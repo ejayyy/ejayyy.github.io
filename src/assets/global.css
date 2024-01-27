@@ -152,6 +152,26 @@ input[type="checkbox"]:checked::after {
     content: var(--logo);
 }
 
+.logo {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    vertical-align: sub;
+    margin-right: 0.4rem;
+}
+
+.logo.leetcode {
+    content: url("image/logo/leetcode.svg");
+}
+
+.logo.github {
+    content: url("image/logo/github.svg");
+}
+
+.logo.blog {
+    content: url("image/logo/blog.png");
+}
+
 .post-head {
     margin: 0.2rem;
 }
