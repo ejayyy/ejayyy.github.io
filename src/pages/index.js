@@ -8,30 +8,27 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Seo title="Home" />
-      <div css={css`margin: 2.5rem auto 0 auto;`}>
-        <div css={css`
+      <div css={css`
                 max-width: 24.5rem;
                 width: 100%;
                 float: left;
                 padding: 0.5rem;
       `}>
-          <img className={'main-logo'} alt="logo" css={css`margin-bottom: 0`} />
-        </div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug} css={css`display: inline-block`}>
-              <h3 className={'post-head'}>
-                {node.frontmatter.title}
-                <small
-                  css={css`opacity: .8`}>
-                  — {node.frontmatter.date}
-                </small>
-              </h3>
-            </Link>
-            <p>{node.frontmatter.spoiler}</p>
-          </div>
-        ))}
+        <img className={'main-logo'} alt="logo" />
       </div>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id} css={css`margin-bottom: 1.8rem;`}>
+          <Link to={node.fields.slug} css={css`display: inline-block;`}>
+            <h3 className={'post-head'}>
+              {node.frontmatter.title}
+              <small className="post-tail">
+                {node.frontmatter.date}
+              </small>
+            </h3>
+          </Link>
+          <p>{node.frontmatter.spoiler}</p>
+        </div>
+      ))}
     </Layout>
   )
 }

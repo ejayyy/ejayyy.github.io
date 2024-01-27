@@ -8,24 +8,30 @@ export default function Tags({ data }) {
   return (
     <Layout>
       <Seo title="Tag" />
-      {data.allMarkdownRemark.group.map(group => (
-        <div css={css`
-                    margin-bottom: 1.2rem;
-                    display: flex;
-                    flex-direction: column;`}>
-          <h3 css={css`margin-bottom: 0.2rem;`}>{group.fieldValue} <small>({group.totalCount})</small></h3>
-          {group.edges.map(({ node }) => (
-            <Link key={node.id} to={node.fields.slug} css={css`display: inline-block;width: fit-content;`}>
-              <h4 className={'post-head'}>
-                {node.frontmatter.title}
-                <small css={css`opacity: .8`}>
-                  — {node.frontmatter.date}
-                </small>
-              </h4>
-            </Link>
-          ))}
-        </div>
-      ))}
+      <div css={css`
+                  margin-bottom: 1.2rem;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 2rem;
+      `}>
+        {data.allMarkdownRemark.group.map(group => (
+          <div>
+            <h3>{group.fieldValue} <small>({group.totalCount})</small></h3>
+            <ul css={css`margin:0`}>
+              {group.edges.map(({ node }) => (
+                <li>
+                  <Link key={node.id} to={node.fields.slug} css={css`display: inline-block;width: fit-content;`}>
+                    {node.frontmatter.title}
+                    <small className="post-tail">
+                      {node.frontmatter.date}
+                    </small>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </Layout>
   )
 }

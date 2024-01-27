@@ -23,14 +23,12 @@ export default function Layout({ children }) {
         `}>
             <header
                 css={css`
-                    padding: 1rem 0;
-                    margin-bottom: 1.5rem;
+                    padding: 2rem 0;
                     `}>
                 <nav css={css`
                     display: flex;
                     justify-content: space-between;
                     margin: 0 auto;
-                    padding: 0 .5rem;
                     max-width: ${maxWidth}rem;
                 `}>
                     <Link to="/" css={css`${nonStyle}`}>
@@ -48,13 +46,12 @@ export default function Layout({ children }) {
             <main css={css`
                 margin: 0 auto;
                 max-width: ${maxWidth}rem;
-                padding: 0 .5rem;
                 min-height: 100vh;
            `}>
                 {children}
             </main>
             <footer css={css`
-                padding: 3rem;
+                padding: 3rem 0;
                 text-align: center;
                 background: #f0f8ff91;
             `}>

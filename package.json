@@ -17,12 +17,12 @@
         "@emotion/react": "^11.11.3",
         "@emotion/styled": "^11.11.0",
         "gatsby": "^5.13.3",
+        "gatsby-omni-font-loader": "^2.0.2",
         "gatsby-plugin-emotion": "^8.13.1",
         "gatsby-plugin-manifest": "^5.13.1",
         "gatsby-plugin-offline": "^6.13.1",
         "gatsby-plugin-react-helmet": "^6.13.1",
         "gatsby-plugin-sharp": "^5.13.1",
-        "gatsby-plugin-typography": "^5.13.1",
         "gatsby-remark-autolink-headers": "^6.13.1",
         "gatsby-remark-images": "^7.13.1",
         "gatsby-remark-prismjs": "^7.13.1",
@@ -31,10 +31,7 @@
         "prismjs": "^1.29.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-helmet": "^6.1.0",
-        "react-typography": "^0.16.23",
-        "typography": "^0.16.24",
-        "typography-theme-funston": "^0.16.19"
+        "react-helmet": "^6.1.0"
     },
     "devDependencies": {
         "gh-pages": "^4.0.0",
