@@ -2,6 +2,7 @@
 title: Motifmate
 date: 2019-10-02
 tags: ["shopify"]
+draft: true
 ---
 ### Set up for local running
 1. Install this app in the Shopify admin

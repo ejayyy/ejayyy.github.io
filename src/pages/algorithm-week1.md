@@ -1,7 +1,7 @@
 ---
 title: 알고리즘 week 1
 date: 2020-09-20
-tags: [algorithm]
+tags: [Algorithm]
 spoiler: Union-find와 하위 개념, 그리고 골치아픈 문제들
 ---
 

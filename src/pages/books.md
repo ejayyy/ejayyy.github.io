@@ -1,8 +1,8 @@
 ---
 title: BOOKS
-date: 2021-09-01
-tags: [life]
-spoiler: 독서일기 (Last update 11/16/23)
+date: 2023-11-16
+tags: [Life]
+spoiler: 독서일기
 ---
 
 # 읽을 책

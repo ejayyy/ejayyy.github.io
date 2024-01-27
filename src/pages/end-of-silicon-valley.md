@@ -1,7 +1,7 @@
 ---
 title: 실리콘 밸리의 종말 1
 date: 2021-06-17
-tags: [industry, 번역]
+tags: [Industry, 번역]
 spoiler: 파티를 끝내는 4가지 방법
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 가장 빠른 올해 다짐
 date: 2024-01-26
-tags: [life]
+tags: [Life]
 spoiler: 언제든 오늘이 제일 빠른 날
 ---
 
@@ -16,8 +16,8 @@ spoiler: 언제든 오늘이 제일 빠른 날
     - [x] [원티드](https://www.wanted.co.kr/community/profile/j8P6yTcE6WqtRxpfstRRKe)
     - [ ] 사람인
     - [ ] 잡코리아
-    - ~~[ ] [링크드인](https://www.linkedin.com/in/ej-h-b8b2a9203/) 상세 기술~~
-    - ~~[ ] 블로그~~
+    - ~~[링크드인](https://www.linkedin.com/in/ej-h-b8b2a9203/) 상세 기술~~
+    - ~~블로그~~
 1. 포트폴리오
     - [ ] 양식을 정하는게 오래걸리긴해
     - [ ] 과거 플젝은 기억이 안나긴 하지만 작성해놓은걸 디벨롭해보자

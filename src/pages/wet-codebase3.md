@@ -1,7 +1,7 @@
 ---
 title: WET CODEBASE 3
 date: 2020-11-19
-tags: [structure, 번역]
+tags: [Structure, 번역]
 spoiler: 추상화의 비용
 ---
 

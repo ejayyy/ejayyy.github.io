@@ -1,7 +1,7 @@
 ---
 title: 실리콘 밸리의 종말 2
 date: 2021-06-21
-tags: [industry, 번역]
+tags: [Industry, 번역]
 spoiler: 작지않은 귀퉁이
 ---
 

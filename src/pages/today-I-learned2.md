@@ -1,7 +1,7 @@
 ---
 title: Today I Learned 2
 date: 2019-09-11
-tags: ["shopify"]
+tags: ["Shopify"]
 ---
 ### Windows sybsystem
 - Install `ubuntu` from MS store (don't reboot yet)

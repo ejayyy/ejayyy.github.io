@@ -1,6 +1,7 @@
 ---
 title: Miscellaneous
 date: 2020-08-20
+draft: true
 ---
 ### Agaile
 - [The 14th Annual State of Agile Report](https://stateofagile.com/)

@@ -2,6 +2,7 @@
 title: Code history
 date: 2020-12-24
 spoiler: 우리의 유산을 찾아서
+draft: true
 ---
 
 사실 '우리'의 유산은 아니고 회사꺼다.  

@@ -1,7 +1,7 @@
 ---
 title:  "Today learning"
 date: 2019-09-09
-tags: ["css", "liquid"]
+tags: ["CSS", "Liquid"]
 ---
 ### Lazy loading
 - [Example](https://css-tricks.com/tips-for-rolling-your-own-lazy-loading/)
@@ -18,6 +18,8 @@ tags: ["css", "liquid"]
     - HTTP header
     - URL
     - Pre/surfix in each items
+
+---
 
 ### Jekyll
 `gem install jekyll bundler`

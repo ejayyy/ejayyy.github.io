@@ -1,7 +1,8 @@
 ---
 title: Today I Learned 3
 date: 2019-09-16
-tags: ["shopify"]
+tags: ["Shopify"]
+draft: true
 ---
 ## Shopify
 ### Slate

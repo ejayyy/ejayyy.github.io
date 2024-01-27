@@ -2,6 +2,7 @@
 title: Node on my WSL
 date: 2020-08-27
 tags: ["WSL"]
+draft: true
 ---
 ### [Node js for WSL](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2)
 - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`

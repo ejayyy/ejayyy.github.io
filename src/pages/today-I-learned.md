@@ -1,7 +1,7 @@
 ---
 title: Today I learned
 date: 2019-09-10
-tags: ["css", "shopify"]
+tags: ["CSS", "Shopify"]
 draft: true
 ---
 ### Dropdown menu

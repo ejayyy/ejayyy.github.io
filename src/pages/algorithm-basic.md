@@ -2,6 +2,7 @@
 title: Basic Algorithm
 date: 2021-11-15
 spoiler: Mathmatical problems
+draft: true
 ---
 
 # 1. [Grading Students](https://www.hackerrank.com/challenges/grading/problem)

@@ -1,7 +1,7 @@
 ---
 title: 실리콘 밸리의 종말 3
 date: 2021-06-23
-tags: [industry, 번역]
+tags: [Industry, 번역]
 draft: false
 spoiler: 마무리
 ---

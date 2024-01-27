@@ -1,7 +1,7 @@
 ---
 title: 월간 목표 2020
 date: 2021-01-11
-tags: [life]
+tags: [Life]
 spoiler: 안녕 2020, 2021
 ---
 

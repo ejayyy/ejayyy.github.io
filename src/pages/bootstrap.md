@@ -1,8 +1,8 @@
 ---
 title:  "Oh my CSS"
 date: 2019-09-23
-tags: ["css"]
-spolier: bootstrap
+tags: ["CSS"]
+spoiler: bootstrap
 draft: true
 ---
 ### CSS selector

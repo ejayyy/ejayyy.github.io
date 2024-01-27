@@ -1,6 +1,7 @@
 ---
 title: Alphabet to number
 date: 2019-11-03
+draft: true
 ---
 ### Transfer alphabet to number
 - `[char].charCodeAt(0)` : a = 97, b = 98....

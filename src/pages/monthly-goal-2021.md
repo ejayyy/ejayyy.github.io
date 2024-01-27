@@ -1,7 +1,7 @@
 ---
 title: 월간 목표 2021
 date: 2021-11-12
-tags: [life]
+tags: [Life]
 spoiler: 벌써 왜 중순이지
 ---
 
