@@ -2,12 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <div css={css`margin: 2.5rem auto 0 auto;`}>
         <div css={css`
                 max-width: 24.5rem;
@@ -39,7 +39,7 @@ export default function Home({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC}
+      sort: {frontmatter: {date: DESC}}
       filter: {frontmatter: {draft: {ne: true}}}
     ) {
       totalCount

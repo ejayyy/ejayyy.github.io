@@ -2,12 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Tags({ data }) {
   return (
     <Layout>
-      <SEO title="Tag" />
+      <Seo title="Tag" />
       {data.allMarkdownRemark.group.map(group => (
         <div css={css`
                     margin-bottom: 1.2rem;
@@ -33,10 +33,10 @@ export default function Tags({ data }) {
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC}
+      sort: {frontmatter: {date: DESC}}
       filter: {frontmatter: {draft: {ne: true}}}
     ) {
-      group(field: frontmatter___tags) {
+      group(field: {frontmatter: {tags: SELECT}}) {
         fieldValue
         totalCount
         edges {

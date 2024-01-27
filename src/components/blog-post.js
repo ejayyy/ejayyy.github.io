@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/react"
 import Layout from "./layout"
-import SEO from "./seo"
+import Seo from "./seo"
 
 export default function BlogPost({ data }) {
     const post = data.markdownRemark
 
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} description={post.frontmatter.spoiler} />
+            <Seo title={post.frontmatter.title} description={post.frontmatter.spoiler} />
             <aside css={css`
                 position: fixed;
                 width: 300px;
