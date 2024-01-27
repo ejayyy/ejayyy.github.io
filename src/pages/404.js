@@ -11,7 +11,7 @@ export default function Lost() {
           text-align: center;
         `}>
         <img className={'main-logo'} css={css`max-width: 65%;`} alt="logo" />
-        <h3>Are you lost way?</h3>
+        <h3>Are you lost your way?</h3>
         <h1 css={css`font-size: 4.1rem;`}><span role="img" aria-label="balloon">🎈</span>404<span role="img" aria-label="balloon">🎈</span></h1>
       </div>
     </Layout>

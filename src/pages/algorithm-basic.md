@@ -2,7 +2,6 @@
 title: Basic Algorithm
 date: 2021-11-15
 spoiler: Mathmatical problems
-draft: true
 ---
 
 # 1. [Grading Students](https://www.hackerrank.com/challenges/grading/problem)
@@ -21,7 +20,7 @@ draft: true
 ## answer
 The one-liner code
 ```java
-System.out.println(grade < 38 || grade % 5 < 3 ? grade : grade + (5 - (grade % 5)));
+grade < 38 || grade % 5 < 3 ? grade : grade + (5 - (grade % 5));
 ```
 
 
