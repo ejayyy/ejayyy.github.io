@@ -39,7 +39,6 @@ export const query = graphql`
       sort: {frontmatter: {date: DESC}}
       filter: {frontmatter: {draft: {ne: true}}}
     ) {
-      totalCount
       edges {
         node {
           id

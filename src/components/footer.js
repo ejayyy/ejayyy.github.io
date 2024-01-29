@@ -20,10 +20,6 @@ export default function Footer({ maxWidth }) {
                 <img className="logo leetcode" alt="logo" />
                 Leetcode
             </a>
-            <a href="https://ejayyy.github.io/blog/" target="_blank" rel="noreferrer">
-                <img className="logo blog" alt="logo" />
-                Previous Blog
-            </a>
         </footer>
     )
 }
