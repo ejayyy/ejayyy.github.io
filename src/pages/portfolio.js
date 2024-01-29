@@ -7,9 +7,9 @@ export default function Portfolio() {
   const projects = [
     {
       title: "업소록",
-      sub: "사용자들이 등록한 상점이나 서비스 등록, 검색 및 리뷰 등록",
+      sub: "사용자들이 등록한 상점이나 서비스 등록, 검색 및 리뷰",
       date: "2023.10 ~",
-      env: ["NextJS", "Prisma", "MSSQL"],
+      env: ["NextJS", "Prisma", "MSSQL", "CPanel"],
       desc: [
         "상점 등록 및 업데이트를 위한 정보 요청 구현",
         "자체 광고를 위한 내부 등록툴 수정 및 최적화",
@@ -18,17 +18,16 @@ export default function Portfolio() {
     {
       title: "학생미술공모전",
       date: "2022.08 ~",
-      env: ["PHP", "Laravel", "MySQL"],
+      env: ["PHP", "Laravel", "MySQL", "CPanel"],
       desc: [
         "공모전 접수 양식 구현 및 이미지 thumbnail 생성, 부분 결제 개발",
-        "Authorize.net SDK를 사용하여 결제 모듈 도입",
         "사이트 컨텐츠 조작을 위한 내부 관리자 페이지 제작",
       ],
     }, {
       title: "티켓 예매 시스템",
       sub: "이벤트 관리 및 좌석 입력, 주문 등의 관리자 페이지",
       date: "2023.01 ~ 2023.10",
-      env: ["PHP", "MySQL", "ASP"],
+      env: ["PHP", "MySQL", "ASP", "IIS", "CPanel"],
       desc: [
         "판매 페이지에서 좌석 선택 및 홀드 기능 추가 및 선점 좌석 자동 해제 구현",
         "주문 수정, 취소 등의 변경과 판매 데이터, 좌석 수정 등의 기능 제작",
@@ -57,27 +56,27 @@ export default function Portfolio() {
       title: "Shopify Theme",
       sub: "Shopify 전용 store theme 제작 및 유지보수",
       date: "2019.01 ~ 2020.06",
-      env: ["Liquid"],
+      env: ["Liquid", "Shopify"],
       desc: [
         "디자이너와 UI, UX를 중점으로 한 dimension 기반 설계 및 개발",
         "ScrollMagic js, Zoho Desk API",
       ]
     }, {
       title: "Network data loss prevention system",
+      sub: "저장된 데이터를 가공하여 사용자에게 데이터 제공",
       date: "2016.10 ~ 2018.02",
       env: ["Java 8", "Spring 5", "Postgresql", "JSP", "Linux", "Tomcat 8"],
       desc: [
-        "모듈에서 인덱싱한 데이터를 이용하여 조건부 검색, 열람, 통계 등의 데이터 제공",
-        "모듈이 저장한 데이터를 웹에서 오픈하여 읽거나 다른 형식의 파일로 추출하는 기능으로 조건식을 만들고 결과 도출",
-        "검색된 데이터를 읽어 통계 도출을 위한 데이텅 그래프 제작 및 엑셀 등의 포맷으로 추출",
+        "모듈에서 인덱싱한 데이터를 오픈하여 읽거나 추출하는 기능",
+        "통계를 위한 데이터 기반 그래프 제작 및 엑셀 추출",
       ]
     }, {
       title: "SSL decryption solution",
       date: "2017.10 ~ 2018.02",
-      env: ["Java 8", "Spring 5", "JPA", "Postgresql", "JSP", "Linux", "Tomcat 8"],
+      env: ["Java 8", "Spring 5", "Postgresql", "JPA", "JSP", "Linux", "Tomcat 8"],
       desc: [
-        "모듈과 REST API 통신을 기반으로 작업",
-        "주로 데이터 조작 시 모듈에게 전송하거나 차단한 기록을 읽어 결과 도출",
+        "REST API를 기반으로 모듈과 데이터 상호교환",
+        "사용자가 조작한 값을 모듈에게 전송하거나 차단한 기록을 읽어 결과 도출",
       ],
     }
   ]
@@ -91,11 +90,22 @@ export default function Portfolio() {
           {projects.map((x, i) =>
             <li id={i}>
               <h5>{x.title}<small css={css`font-weight:300;margin-left:.5rem;`}>({x.date})</small></h5>
+              <div css={css`display:flex;
+                align-items:center;
+                gap:.5rem;
+                flex-wrap:wrap;
+                font-weight:500;
+                font-size:0.9rem;
+                color:white;
+                margin:.2rem 0 .6rem;`}>
+                {x.env.map((env, i) => <span
+                  id={i}
+                  css={css`background-color:gray;
+                    padding:0 .3rem;
+                    border-radius:.3rem;`}
+                >{env}</span>)}
+              </div>
               {x.sub && <p>{x.sub}</p>}
-              {x.env.map((env, i) => <span
-                id={i}
-                css={css`margin-right:.5rem;background-color:lightgray;padding:0 .3rem;border-radius:.3rem;`}
-              >{env}</span>)}
               <ul>
                 {x.desc.map((desc, i) => <li id={i}>{desc}</li>)}
               </ul>
