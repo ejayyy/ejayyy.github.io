@@ -49,18 +49,9 @@
       }
     })
   </script><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500;700&amp;display=swap"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 1j66vkv">.css-1j66vkv{padding:2rem 0;}</style><header class="css-1j66vkv"><style data-emotion="css 4kk17s">.css-4kk17s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;margin:0 auto;max-width:45rem;}</style><nav class="css-4kk17s"><style data-emotion="css ncaqs5">.css-ncaqs5{box-shadow:none;}.css-ncaqs5:hover{color:inherit;box-shadow:none;-webkit-text-decoration:underline;text-decoration:underline;}</style><a class="css-ncaqs5" href="/"><style data-emotion="css ti75j2">.css-ti75j2{margin:0;}</style><h3 class="css-ti75j2">MySweetLittleBlog</h3></a><style data-emotion="css upyqze">.css-upyqze{margin:0.1rem 0.5rem;box-shadow:none;}.css-upyqze:hover{color:inherit;box-shadow:none;-webkit-text-decoration:underline;text-decoration:underline;}</style><a class="css-upyqze" href="/tag/">Tag</a></nav></header><style data-emotion="css 1po1xvf">.css-1po1xvf{margin:0 auto;max-width:45rem;}</style><main class="css-1po1xvf"><article><style data-emotion="css hj8uh5">.css-hj8uh5{margin-bottom:2.5rem;}</style><section class="css-hj8uh5"><style data-emotion="css 18xxmce">.css-18xxmce{font-size:2.2rem;font-weight:700;}</style><h1 id="post-header" class="css-18xxmce">Sliding window</h1><p>Dynamic Programming</p><style data-emotion="css 2qga7i">.css-2qga7i{text-align:right;}</style><p class="css-2qga7i">January 27, 2024</p></section><section class="post-body"><h1 id="what-is-a-sliding-window" style="position:relative;"><a href="#what-is-a-sliding-window" aria-label="what is a sliding window permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a <code class="language-jstext">sliding window</code></h1>
-<ul>
-<li>길거나 짧은 sequence를 특정할 때
-<ul>
-<li>주로 <code class="language-jstext">array</code>, <code class="language-jstext">string</code>에 사용</li>
-</ul>
-</li>
-<li>time complextity <code class="language-jstext">O(k*n)</code>
-<ul>
-<li>Brute force의 경우 <code class="language-jstext">O(n^2)</code></li>
-</ul>
-</li>
-</ul>
+<p>Time complextity <code class="language-jstext">O(k*n)</code> (Brute force의 경우 <code class="language-jstext">O(n^2)</code>)<br>
+길거나 짧은 sequence를 특정할 때<br>
+주로 <code class="language-jstext">array</code>, <code class="language-jstext">string</code>에 사용</p>
 <h2 id="접근방식" style="position:relative;"><a href="#%EC%A0%91%EA%B7%BC%EB%B0%A9%EC%8B%9D" aria-label="접근방식 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>접근방식</h2>
 <ol>
 <li>fast / slow
@@ -79,7 +70,7 @@
 <li>fast / 따라가기
 <ul>
 <li>선행 탐색 이후 slower 결정</li>
-<li><a href="https://leetcode.com/problems/house-robber">lagging</a></li>
+<li><a href="https://leetcode.com/problems/house-robber">Lagging</a></li>
 </ul>
 </li>
 <li>front / back
@@ -88,6 +79,26 @@
 </ul>
 </li>
 </ol>
+<h2 id="sample-solution" style="position:relative;"><a href="#sample-solution" aria-label="sample solution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample solution</h2>
+<p><a href="https://leetcode.com/problems/max-consecutive-ones-iii">Max Consecutive Ones III</a><br>
+<code class="language-jstext">0</code>, <code class="language-jstext">1</code>로 구성된 <code class="language-jstext">nums</code> array. <code class="language-jstext">0</code>을 <code class="language-jstext">k</code>번만큼 뒤집어 <code class="language-jstext">1</code>을 연속되게 만든다. 이 때 만들 수 있는 최대 길이</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-jsjava"><code class="language-jsjava"><span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> right <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> right<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        k<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        k <span class="token operator">+=</span> <span class="token number">1</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        left<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">return</span> right <span class="token operator">-</span> left<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-jstext">0</code>의 숫자를 세지않고 주어진 <code class="language-jstext">k</code>를 계속 줄여나간다<br>
+<code class="language-jstext">while</code>문으로 <code class="language-jstext">k</code>를 양수로 돌리지않아도 됨</p>
+<h1 id="need-to-say-the-two-pointer" style="position:relative;"><a href="#need-to-say-the-two-pointer" aria-label="need to say the two pointer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Need to say the TWO POINTER</h1>
+<p>Time complextity <code class="language-jstext">O(N log n)</code><br>
+보통 정렬된 배열의 pair를 찾는데 쓰임</p>
 <h1 id="출처" style="position:relative;"><a href="#%EC%B6%9C%EC%B2%98" aria-label="출처 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>출처</h1>
 <blockquote>
 <p><a href="https://stackoverflow.com/a/64111403">What is Sliding Window Algorithm? Examples?</a><br>
@@ -96,6 +107,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-d95b706b7b3f4227083c.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-4768df387f54ccd44e37.js\"],\"component---src-components-blog-post-js\":[\"/component---src-components-blog-post-js-467ec0bfc196ec182388.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-f8db39187c6f61d859ed.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-2baae8fbd6cd1c77ef7e.js\"],\"component---src-pages-portfolio-js\":[\"/component---src-pages-portfolio-js-8fda09c23b1bdfffc82f.js\"],\"component---src-pages-tag-js\":[\"/component---src-pages-tag-js-271785ca3da42669bb69.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-d95b706b7b3f4227083c.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-4768df387f54ccd44e37.js\"],\"component---src-components-blog-post-js\":[\"/component---src-components-blog-post-js-467ec0bfc196ec182388.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-f8db39187c6f61d859ed.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-2baae8fbd6cd1c77ef7e.js\"],\"component---src-pages-portfolio-js\":[\"/component---src-pages-portfolio-js-b9bfaf4697bdb51d81b0.js\"],\"component---src-pages-tag-js\":[\"/component---src-pages-tag-js-271785ca3da42669bb69.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="96b0e5f3109976da930b";</script><script src="/webpack-runtime-16750d9d049376b19bfa.js" async></script><script src="/framework-57cb914be82ea9a1cfb7.js" async></script><script src="/app-d95b706b7b3f4227083c.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="2f87ad68739c2f7f5430";</script><script src="/webpack-runtime-66b2c508b79e664e8bac.js" async></script><script src="/framework-57cb914be82ea9a1cfb7.js" async></script><script src="/app-d95b706b7b3f4227083c.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
