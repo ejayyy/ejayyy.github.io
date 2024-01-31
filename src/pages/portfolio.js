@@ -27,7 +27,7 @@ export default function Portfolio() {
       title: "티켓 예매 시스템",
       sub: "이벤트 관리 및 좌석 입력, 주문 등의 관리자 페이지",
       date: "2023.01 ~ 2023.10",
-      env: ["PHP", "MySQL", "ASP", "IIS", "CPanel"],
+      env: ["PHP", "MySQL", "CPanel", "ASP", "IIS"],
       desc: [
         "판매 페이지에서 좌석 선택 및 홀드 기능 추가 및 선점 좌석 자동 해제 구현",
         "주문 수정, 취소 등의 변경과 판매 데이터, 좌석 수정 등의 기능 제작",
