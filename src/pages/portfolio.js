@@ -7,7 +7,7 @@ export default function Portfolio() {
   const projects = [
     {
       title: "업소록",
-      sub: "사용자들이 등록한 상점이나 서비스 등록, 검색 및 리뷰",
+      sub: "등록된 상점이나 서비스 검색, 수정 요청 및 리뷰",
       date: "2023.10 ~",
       env: ["NextJS", "Prisma", "MSSQL", "CPanel"],
       desc: [
@@ -17,6 +17,7 @@ export default function Portfolio() {
     },
     {
       title: "학생미술공모전",
+      sub: "매년 개최되는 공모전 접수 및 홍보 사이트",
       date: "2022.08 ~",
       env: ["PHP", "Laravel", "MySQL", "CPanel"],
       desc: [
@@ -37,7 +38,7 @@ export default function Portfolio() {
       title: "판매 채널 주문 관리",
       sub: "Rest API를 활용한 판매 채널들의 상품, 주문 내역 수집 및 업데이트",
       date: "2020.08 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor3", "MSSQL"],
+      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx"],
       desc: [
         "Linked server를 사용한 쿼리 작업 수행",
         "Amazon, Yahoo, Rakuten, Coupang API 분석 및 적용",
@@ -47,7 +48,7 @@ export default function Portfolio() {
       title: "배송 관리",
       sub: "배송 정보 및 송장 번호, 재고 상태 확인 및 상태 업데이트 관리",
       date: "2021.04 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor3", "MSSQL"],
+      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx"],
       desc: [
         "판매량, 재고관리 등의 데이터 수집 및 통계 데이터 노출",
       ]
@@ -56,10 +57,10 @@ export default function Portfolio() {
       title: "Shopify Theme",
       sub: "Shopify 전용 store theme 제작 및 유지보수",
       date: "2019.01 ~ 2020.06",
-      env: ["Liquid", "Shopify"],
+      env: ["Liquid", "Shopify", "SCSS"],
       desc: [
         "디자이너와 UI, UX를 중점으로 한 dimension 기반 설계 및 개발",
-        "ScrollMagic js, Zoho Desk API",
+        "ScrollMagic js, Zoho Desk API 사용",
       ]
     }, {
       title: "Network data loss prevention system",

@@ -3,13 +3,13 @@ title: Sliding window
 date: 2024-01-27
 tags: [Algorithm]
 spoiler: Dynamic Programming
+draft: true
 ---
 
 # What is a `sliding window`
-- 길거나 짧은 sequence를 특정할 때
-    - 주로 `array`, `string`에 사용
-- time complextity `O(k*n)`
-    - Brute force의 경우 `O(n^2)`
+Time complextity `O(k*n)` (Brute force의 경우 `O(n^2)`)  
+길거나 짧은 sequence를 특정할 때  
+주로 `array`, `string`에 사용  
 
 ## 접근방식
 1. fast / slow
@@ -25,8 +25,8 @@ spoiler: Dynamic Programming
 1. front / back
     - 시작과 끝에서 각자 탐색
 
-1. Solution
-[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)
+## Sample solution
+[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)  
 `0`, `1`로 구성된 `nums` array. `0`을 `k`번만큼 뒤집어 `1`을 연속되게 만든다. 이 때 만들 수 있는 최대 길이 
 ```java
 int left = 0, right;
@@ -42,9 +42,14 @@ for (right = 0; right < nums.length; right++) {
 }
 return right - left;
 ```
-`0`의 숫자를 세지않고 주어진 `k`를 계속헤서 줄여나간다
+`0`의 숫자를 세지않고 주어진 `k`를 계속 줄여나간다  
 `while`문으로 `k`를 양수로 돌리지않아도 됨
+
+# Need to say the TWO POINTER
+Time complextity `O(N log n)`  
+보통 정렬된 배열의 pair를 찾는데 쓰임
+
 
 # 출처
 > [What is Sliding Window Algorithm? Examples?](https://stackoverflow.com/a/64111403)  
-> [How to Solve Sliding Window Problems](https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66)
+> [How to Solve Sliding Window Problems](https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66)  
