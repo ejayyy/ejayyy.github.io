@@ -2,16 +2,41 @@
 title: Sliding window
 date: 2024-01-27
 tags: [Algorithm]
-spoiler: Dynamic Programming
-draft: true
+spoiler: Two Pointer
 ---
+
+# Need to say the `TWO POINTER`
+Time complextity `O(N log n)`  
+보통 정렬된 배열의 pair를 찾는데 쓰임
+
+### [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/)  
+양수와 음수를 번갈아 정렬
+```java
+int[] answer = new int[nums.length];
+
+int pos = 0,
+    neg = 1;
+for(int i=0;i<nums.length;i++){
+    if(nums[i] > 0){
+        answer[pos] = nums[i];
+        pos += 2;
+    }
+    else{
+        answer[neg] = nums[i];
+        neg += 2;
+    }
+}
+
+return answer;
+```
+It's quite easy to understand
 
 # What is a `sliding window`
 Time complextity `O(k*n)` (Brute force의 경우 `O(n^2)`)  
 길거나 짧은 sequence를 특정할 때  
 주로 `array`, `string`에 사용  
 
-## 접근방식
+### 접근방식
 1. fast / slow
     - fast slow 모두 나란히 증가
     - [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length)
@@ -25,8 +50,7 @@ Time complextity `O(k*n)` (Brute force의 경우 `O(n^2)`)
 1. front / back
     - 시작과 끝에서 각자 탐색
 
-## Sample solution
-[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)  
+### [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)  
 `0`, `1`로 구성된 `nums` array. `0`을 `k`번만큼 뒤집어 `1`을 연속되게 만든다. 이 때 만들 수 있는 최대 길이 
 ```java
 int left = 0, right;
@@ -45,11 +69,14 @@ return right - left;
 `0`의 숫자를 세지않고 주어진 `k`를 계속 줄여나간다  
 `while`문으로 `k`를 양수로 돌리지않아도 됨
 
-# Need to say the TWO POINTER
-Time complextity `O(N log n)`  
-보통 정렬된 배열의 pair를 찾는데 쓰임
 
+# 다른점
+- 슬라이딩 윈도우 : 보통 모든 element를 사용하는데 쓰임
+- 투포인터 : 보통 2개의 값을 비교하는데 사용
+
+&nbsp;
 
 # 출처
 > [What is Sliding Window Algorithm? Examples?](https://stackoverflow.com/a/64111403)  
 > [How to Solve Sliding Window Problems](https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66)  
+> [Is two pointer problem same as sliding window](https://stackoverflow.com/a/64078338)
