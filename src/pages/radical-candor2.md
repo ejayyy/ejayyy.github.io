@@ -2,7 +2,7 @@
 title: Radical Candor 2
 date: 2024-02-20
 tags: [Book]
-spoiler: 내가 겪은 모든 팀장들에게
+spoiler: 협력, 그 깊고도 심오한 세계
 ---
 
 입사한지 얼마안된 차에 `자신이 속한 팀`을 `팀장 앞`에서 솔직하게 평가하는 사람이 얼마나 될까?
