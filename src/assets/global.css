@@ -108,6 +108,7 @@ a:hover {
 
 hr {
     background-color: var(--hr);
+    margin: 3rem 0;
 }
 
 table {
