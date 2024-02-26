@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.3"/><meta data-react-helmet="true" name="description" content="관리 실전편"/><meta data-react-helmet="true" property="og:title" content="Radical Candor 3"/><meta data-react-helmet="true" property="og:description" content="관리 실전편"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="EJ"/><meta data-react-helmet="true" name="twitter:title" content="Radical Candor 3"/><meta data-react-helmet="true" name="twitter:description" content="관리 실전편"/><meta data-react-helmet="true" name="google-site-verification" content="v5J3c_SNukckZJQW9mvLPJyLEdhS4J4Q0lBhx4nLt5U"/><meta name="theme-color" content="#6b37bf"/><style data-href="/styles.e5e66523da8964d2eca4.css" data-identity="gatsby-global-css">:root{--bg:#fff0f5;--textNormal:#222;--textRevert:#fff8dc;--linkNormal:#9bc5ec;--linkHighlight:#3498db;--hr:rgba(0,0,0,.2);--logo:url(/static/laptop-cat-light-26486ae7b5a4f7a85e5a774b6ab467a8.svg);--tableBorder:#d6d6d6;--dragColor:crimson;--dragBackground:gold;--heading:25px}body{background-color:var(--bg);color:var(--textNormal);font-display:swap;font-family:IBM Plex Sans KR;font-style:normal;font-weight:300;margin:0;padding:0;transition:color .2s ease-out,background .2s ease-out}body.dark{--bg:#1d3434;--textNormal:#f0fff0;--textRevert:#2f4f4f;--linkNormal:#4040e6;--linkHighlight:#68bcee;--hr:hsla(0,0%,100%,.2);--logo:url(/static/laptop-cat-night-8af8732f52d16f30a21a26614ed43512.svg);--tableBorder:#535353;--dragColor:#e9967a;--dragBackground:#6495ed}body.dark :not(pre)>code[class*=language-],body.dark pre[class*=language-]{background-color:#161721}::selection{background-color:var(--dragBackground);color:var(--dragColor)}blockquote{background-color:rgba(0,0,0,.1);border-left:5px solid var(--linkNormal);margin:.5rem;padding:.7rem 1.2rem}p{margin-bottom:0;margin-top:0}h1,h2,h3,h4,h5,h6{font-weight:500;margin-bottom:0}h1{font-size:var(--heading)}h2{font-size:calc(var(--heading) - .1rem)}h3{font-size:calc(var(--heading) - .2rem)}h4{font-size:calc(var(--heading) - .3rem)}h5{font-size:calc(var(--heading) - .4rem)}h6{font-size:calc(var(--heading) - .5rem)}aside a,h1 a,h2 a,h3 a{box-shadow:none;color:initial;transition:none}a{box-shadow:inset 0 -3px 0 var(--linkNormal);color:var(--textNormal);text-decoration:none;transition:box-shadow .5s,color .2s}a:hover{box-shadow:inset 0 -50px 0 var(--linkHighlight);color:var(--textRevert)}hr{background-color:var(--hr);margin:3rem 0}table{max-width:500px}td,th{border-bottom:1px solid var(--tableBorder)}:not(pre)>code{white-space:break-spaces!important;word-break:break-word!important}input[type=checkbox]{-webkit-appearance:none;appearance:none;border:1px solid #d3d3d3;border-radius:.25em;height:1em;margin-top:.25em;position:relative;vertical-align:top;vertical-align:middle;width:1em}input[type=checkbox]:checked{background-color:#6a5acd}input[type=checkbox]:checked:after{color:snow;content:"X";font-size:.7rem;font-weight:700;position:absolute;text-align:center;top:0;width:100%}.main-logo{content:var(--logo)}.logo{display:inline-block;height:auto;margin-right:.4rem;vertical-align:sub;width:20px}.logo.leetcode{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NSIgaGVpZ2h0PSIxMTEiIGZpbGw9Im5vbmUiIGNsYXNzPSJwcmVmaXhfX2gtZnVsbCBwcmVmaXhfX3ctYXV0byBwcmVmaXhfX21heC13LW5vbmUiIHZpZXdCb3g9IjAgMCA5NSAxMTEiPjxwYXRoIGZpbGw9IiNGRkExMTYiIGQ9Ik02OC4wMDYgODMuMDY2YTYuMzY4IDYuMzY4IDAgMCAxIDkuMDE2LjAxNSA2LjM5NCA2LjM5NCAwIDAgMS0uMDE0IDkuMDMyTDY1LjkzNSAxMDMuMTdjLTEwLjIxNiAxMC4yMDEtMjYuODc1IDEwLjM0OS0zNy4yNjMuMzQzLS4wNi0uMDU3LTQuNjg2LTQuNTkzLTE5Ljk0NS0xOS41NTYtMTAuMTUyLTkuOTU0LTExLjE2NC0yNS44ODItMS42MS0zNi4xMWwxNy44MTEtMTkuMDczYzkuNDgyLTEwLjE1MiAyNi45NTktMTEuMjYyIDM3LjgtMi40OTVsMTYuMTc3IDEzLjA4M2E2LjM5NCA2LjM5NCAwIDAgMSAuOTU2IDguOTggNi4zNjggNi4zNjggMCAwIDEtOC45NjYuOTU4TDU0LjcxOCAzNi4yMTdjLTUuNjctNC41ODQtMTUuNTg3LTMuOTU1LTIwLjQ3OSAxLjI4NEwxNi40MjcgNTYuNTczYy00LjY1IDQuOTgtNC4xNCAxMy4wMDEgMS4yMTkgMTguMjU2bDE5Ljg1IDE5LjQ2NWM1LjQwMiA1LjIwMiAxNC4xMzQgNS4xMjQgMTkuNDM3LS4xN2wxMS4wNzMtMTEuMDU4WiIvPjxwYXRoIGZpbGw9IiNCM0IzQjMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTQxLjEwNyA3Mi4wMDFjLTMuNTIxIDAtNi4zNzYtMi44NTktNi4zNzYtNi4zODZzMi44NTUtNi4zODYgNi4zNzYtNi4zODZoNDcuMDE3YzMuNTIxIDAgNi4zNzYgMi44NTkgNi4zNzYgNi4zODZzLTIuODU1IDYuMzg2LTYuMzc2IDYuMzg2SDQxLjEwN1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTQ5LjkxMiAyLjAyM2E2LjM2NyA2LjM2NyAwIDAgMSA5LjAxLS4zIDYuMzk0IDYuMzk0IDAgMCAxIC4zIDkuMDI2TDE2LjQyOSA1Ni41NzNjLTQuNjUxIDQuOTc5LTQuMTQyIDEzIDEuMjE3IDE4LjI1NkwzNy40MSA5NC4yMWE2LjM5NCA2LjM5NCAwIDAgMSAuMDk2IDkuMDMxIDYuMzY3IDYuMzY3IDAgMCAxLTkuMDE2LjA5N0w4LjcyNiA4My45NTdjLTEwLjE1MS05Ljk1NS0xMS4xNjMtMjUuODgzLTEuNjEtMzYuMTFMNDkuOTEzIDIuMDIyWiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+)}.logo.github{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5OCIgaGVpZ2h0PSI5NiI+PHBhdGggZmlsbD0iIzI0MjkyZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNDguODU0IDBDMjEuODM5IDAgMCAyMiAwIDQ5LjIxN2MwIDIxLjc1NiAxMy45OTMgNDAuMTcyIDMzLjQwNSA0Ni42OSAyLjQyNy40OSAzLjMxNi0xLjA1OSAzLjMxNi0yLjM2MiAwLTEuMTQxLS4wOC01LjA1Mi0uMDgtOS4xMjctMTMuNTkgMi45MzQtMTYuNDItNS44NjctMTYuNDItNS44NjctMi4xODQtNS43MDQtNS40Mi03LjE3LTUuNDItNy4xNy00LjQ0OC0zLjAxNS4zMjQtMy4wMTUuMzI0LTMuMDE1IDQuOTM0LjMyNiA3LjUyMyA1LjA1MiA3LjUyMyA1LjA1MiA0LjM2NyA3LjQ5NiAxMS40MDQgNS4zNzggMTQuMjM1IDQuMDc0LjQwNC0zLjE3OCAxLjY5OS01LjM3OCAzLjA3NC02LjYtMTAuODM5LTEuMTQxLTIyLjI0My01LjM3OC0yMi4yNDMtMjQuMjgzIDAtNS4zNzggMS45NC05Ljc3OCA1LjAxNC0xMy4yLS40ODUtMS4yMjItMi4xODQtNi4yNzUuNDg2LTEzLjAzOCAwIDAgNC4xMjUtMS4zMDQgMTMuNDI2IDUuMDUyYTQ2Ljk3IDQ2Ljk3IDAgMCAxIDEyLjIxNC0xLjYzYzQuMTI1IDAgOC4zMy41NzEgMTIuMjEzIDEuNjMgOS4zMDItNi4zNTYgMTMuNDI3LTUuMDUyIDEzLjQyNy01LjA1MiAyLjY3IDYuNzYzLjk3IDExLjgxNi40ODUgMTMuMDM4IDMuMTU1IDMuNDIyIDUuMDE1IDcuODIyIDUuMDE1IDEzLjIgMCAxOC45MDUtMTEuNDA0IDIzLjA2LTIyLjMyNCAyNC4yODMgMS43OCAxLjU0OCAzLjMxNiA0LjQ4MSAzLjMxNiA5LjEyNiAwIDYuNi0uMDggMTEuODk3LS4wOCAxMy41MjYgMCAxLjMwNC44OSAyLjg1MyAzLjMxNiAyLjM2NCAxOS40MTItNi41MiAzMy40MDUtMjQuOTM1IDMzLjQwNS00Ni42OTFDOTcuNzA3IDIyIDc1Ljc4OCAwIDQ4Ljg1NCAweiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+)}.logo.blog{content:url(data:image/png;base64,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)}.post-head{margin:.2rem}.post-tail{font-size:small;font-weight:400;margin-left:.5rem;opacity:.8}.post-tail:before{content:"("}.post-tail:after{content:")"}.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{margin-bottom:.2rem;margin-top:1.7rem}@media (max-width:45rem){body{padding:0 1rem}.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{margin-left:1rem}.post-body h1 .anchor svg,.post-body h2 .anchor svg,.post-body h3 .anchor svg,.post-body h4 .anchor svg,.post-body h5 .anchor svg,.post-body h6 .anchor svg{visibility:visible}}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#073642}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><title data-react-helmet="true">Radical Candor 3 | My sweet little blog</title><link rel="icon" href="/favicon-32x32.png?v=de424737deaa639921edfca2aaed7257" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=de424737deaa639921edfca2aaed7257"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=de424737deaa639921edfca2aaed7257"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500;700&amp;display=swap"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 1j66vkv">.css-1j66vkv{padding:2rem 0;}</style><header class="css-1j66vkv"><style data-emotion="css 4kk17s">.css-4kk17s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;margin:0 auto;max-width:45rem;}</style><nav class="css-4kk17s"><style data-emotion="css ncaqs5">.css-ncaqs5{box-shadow:none;}.css-ncaqs5:hover{color:inherit;box-shadow:none;-webkit-text-decoration:underline;text-decoration:underline;}</style><a class="css-ncaqs5" href="/"><style data-emotion="css ti75j2">.css-ti75j2{margin:0;}</style><h3 class="css-ti75j2">MySweetLittleBlog</h3></a><style data-emotion="css upyqze">.css-upyqze{margin:0.1rem 0.5rem;box-shadow:none;}.css-upyqze:hover{color:inherit;box-shadow:none;-webkit-text-decoration:underline;text-decoration:underline;}</style><a class="css-upyqze" href="/tag/">Tag</a></nav></header><style data-emotion="css 1po1xvf">.css-1po1xvf{margin:0 auto;max-width:45rem;}</style><main class="css-1po1xvf"><article><style data-emotion="css hj8uh5">.css-hj8uh5{margin-bottom:2.5rem;}</style><section class="css-hj8uh5"><style data-emotion="css 18xxmce">.css-18xxmce{font-size:2.2rem;font-weight:700;}</style><h1 id="post-header" class="css-18xxmce">Radical Candor 3</h1><p>관리 실전편</p><style data-emotion="css 2qga7i">.css-2qga7i{text-align:right;}</style><p class="css-2qga7i">February 22, 2024</p></section><section class="post-body"><h1 id="일과-삶의-통합" style="position:relative;"><a href="#%EC%9D%BC%EA%B3%BC-%EC%82%B6%EC%9D%98-%ED%86%B5%ED%95%A9" aria-label="일과 삶의 통합 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>일과 삶의 통합</h1>
+<p>나 먼저 중심을 잡자<br>
+직장과 개인 생활은 반비례하지않다. 한 쪽이 무너지면 다른 쪽도 버티지 못하는 걸 간과해서는 안된다<br>
+내가 현재 처한 상황과 조건은 어떠한지 돌아보고 필수 조건을 추려 덜 중요한 것을 내려놓자</p>
+<hr>
+<h1 id="관리-101" style="position:relative;"><a href="#%EA%B4%80%EB%A6%AC-101" aria-label="관리 101 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>관리 101</h1>
+<p>관리자의 감정에 따라 팀 분위기가 바뀌는가?<br>
+나는 평정심을 유지한다 주장해도 동료들은 다를 수 있다<br>
+차라리 사정을 말하고 양해를 구하는게 낫다. 이건 약한 소리가 아니고 <em>Radical Candor</em>의 실행이다.</p>
+<h2 id="결속력-돈주고-사면-안되나요" style="position:relative;"><a href="#%EA%B2%B0%EC%86%8D%EB%A0%A5-%EB%8F%88%EC%A3%BC%EA%B3%A0-%EC%82%AC%EB%A9%B4-%EC%95%88%EB%90%98%EB%82%98%EC%9A%94" aria-label="결속력 돈주고 사면 안되나요 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>결속력, 돈주고 사면 안되나요?</h2>
+<blockquote>
+<p>개개인의 능력을 최대한 끌어낼려면 상호 신뢰와 자유가 필요하다.<br>
+관리자는 자발적으로 해낼 수 있는 환경을 조성해야 한다.</p>
+</blockquote>
+<h3 id="사내-행사" style="position:relative;"><a href="#%EC%82%AC%EB%82%B4-%ED%96%89%EC%82%AC" aria-label="사내 행사 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>사내 행사</h3>
+<p>강제 참여? 1박2일? 술? 회식?<br>
+<em>반발심</em>을 돈주고 사셨군요</p>
+<p> </p>
+<p>직원 참여 행사는 단결, 의기투합을 위한 노력이지만 위험요소가 있다<br>
+아무리 좋아보이는 행사도 의무감과 강제력을 느끼는 사람이 있다는걸 잊으면 안된다<br>
+술이 있는 자리는 더더욱 위험하다<br>
+어디까지 실수할 수 있는지 구경하고 싶지 않다면 절제하는 분위기를 조성하는게 낫다<br>
+우리는 맨정신에, 근무시간 중에, <em>진솔하고 많은 이야기</em>를 나눌 수 있으니 업무 외 시간에 의존하지 말자</p>
+<h2 id="post-승진" style="position:relative;"><a href="#post-%EC%8A%B9%EC%A7%84" aria-label="post 승진 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-승진</h2>
+<p>날 위한 딸랑이<br>
+가 아님을 알리자</p>
+<ul>
+<li><strong>보상</strong><br>
+왜 승진했는지, 바뀐 업무와 직위는 어떤 일인지 공유해야 한다<br>
+칭찬할 일들을 모두에게 알리자</li>
+<li><strong>인사</strong><br>
+관리자가 직원들에게 감사를 표하는건 생각보다 더 깊은 의미를 줄 수 있다</li>
+<li><strong>마이스터</strong><br>
+어떻게 더 효율적으로 했는지 공유하는게 좋다<br>
+개개인의 성향에 맞는 방식을 취하자</li>
+</ul>
+<h2 id="확증-편향" style="position:relative;"><a href="#%ED%99%95%EC%A6%9D-%ED%8E%B8%ED%96%A5" aria-label="확증 편향 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>확증 편향</h2>
+<blockquote>
+<p>"<em>모두 똑같은 세계관을 가져야 한다</em>" 강요하면 피상적인 관계에 머무른다.<br>
+완전하게 솔직한 관계는 서로 의지하는 기본 존중과 예의에서 시작한다.</p>
+</blockquote>
+<p>사람은 보고 싶은 것만 본다</p>
+<p> </p>
+<p>분위기가 어느 한 쪽은 배척하는 방향으로 흐른다면 몇몇은 드러내지 못할 불만이 쌓인다<br>
+소수를 무시하고 <code class="language-jstext">완전한 솔직함</code>을 실천하는건 불가능한 일이다.<br>
+대다수에게 좋은 방향일지라도 그렇지 않은 사람들에게는 다른 방식을 취해야한다.<br>
+개개인의 성향을 파악한다면 그리 어려운 일이 아니다.</p>
+<h2 id="감정적-상황-대처법" style="position:relative;"><a href="#%EA%B0%90%EC%A0%95%EC%A0%81-%EC%83%81%ED%99%A9-%EB%8C%80%EC%B2%98%EB%B2%95" aria-label="감정적 상황 대처법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>감정적 상황 대처법</h2>
+<p>관리자는 심리 상담사도 겸직해야 한다. <em>그러라고 돈 더 받는다</em></p>
+<ul>
+<li><strong>감정 확인</strong><br>
+"<em>현재 당신이 어떤 기분인지 알고있다</em>"는 사실을 알리자<br>
+당사자가 자신의 정확한 상태를 인지하는데도 도움된다</li>
+<li><strong>질문</strong><br>
+납득 가능한 선까지 문제를 파고들어야 핵심을 알 수 있다</li>
+<li><strong>휴식</strong><br>
+싸움이 일어날 징조라면 끼어들자<br>
+<em>제어 불가능한 감정의 소용돌이</em>에는 쉼표가 필요하다<br>
+먼저 잠시 자리를 비우거나 물 한모금의 휴식을 취하게 해야한다<br>
+정 안되면 다음 번에 해야지</li>
+<li><strong>야외 상담</strong><br>
+바깥을 걷거나 테라스에 앉아 이야기하면 감정도 누그러지고 객관화가 될 수도 있다</li>
+<li><strong>진작에 잘하자</strong><br>
+관리자로서 건강한 관계 구축은 핵심이다</li>
+</ul>
+<p>긍정적으로 변한 팀원들을 보게 된다면 업무 성과와는 다른 큰 의미로 다가올 것이다</p>
+<p> </p>
+<h2 id="대화법" style="position:relative;"><a href="#%EB%8C%80%ED%99%94%EB%B2%95" aria-label="대화법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>대화법</h2>
+<p>상사로서의 능력과 모범적인 대처방식을 보인다면 수많은 커피와 점심, 저녁에 애쓸 필요가 없다</p>
+<h3 id="받고싶은-만큼-하자" style="position:relative;"><a href="#%EB%B0%9B%EA%B3%A0%EC%8B%B6%EC%9D%80-%EB%A7%8C%ED%81%BC-%ED%95%98%EC%9E%90" aria-label="받고싶은 만큼 하자 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>받고싶은 만큼 하자</h3>
+<p>모범적이지 않은 상사에게 진솔할 직원은 없다<br>
+너부터 안하면 아무도 안한다</p>
+<h3 id="까고-까이고" style="position:relative;"><a href="#%EA%B9%8C%EA%B3%A0-%EA%B9%8C%EC%9D%B4%EA%B3%A0" aria-label="까고 까이고 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>까고 까이고</h3>
+<p>의견과 조언은 쉽게 꺼내기 어렵다<br>
+나중에 잘못되거나 실수하면 안될 것 같다는 공포가 누구에게나 있다</p>
+<p> </p>
+<p>추구하는 가치와 기준을 공지하자<br>
+제대로 된 비판이 아니라도 방어하려 들지말고! 어떤 의도인지, 이해한 내용이 맞는지 대화로 풀어나가면 된다<br>
+어렵게 꺼낸 의견을 바로 부정하고 변호하면 시간 낭비<br>
+총합한 의견들의 칭찬과 비판 비율이 붕괴됐다면 정신차리자. 빨간불이다.</p>
+<h3 id="의견-교환-시스템" style="position:relative;"><a href="#%EC%9D%98%EA%B2%AC-%EA%B5%90%ED%99%98-%EC%8B%9C%EC%8A%A4%ED%85%9C" aria-label="의견 교환 시스템 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>의견 교환 시스템</h3>
+<p>굳이 입을 열지 않아도 의견을 나눌 방법은 많다<br>
+무기명 쪽지를 통한 질의응답, 투표를 통한 우선순위 지정 등 대체재를 차용하자<br>
+이런 방법들이 정착되고 적극적인 피드백이 따라온다면 사람들은 점점 말할 수 있게 된다</p>
+<h3 id="각-잡지마" style="position:relative;"><a href="#%EA%B0%81-%EC%9E%A1%EC%A7%80%EB%A7%88" aria-label="각 잡지마 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>각 잡지마</h3>
+<p>나중으로 미루지말자<br>
+공적인 일정으로 만들지말고 짬을 내어 해결하자. 그 때 가면 무슨 문제였는지 기억조차 안난다</p>
+<p> </p>
+<p>3분으로 충분하다. 빠르고 즉흥적인 대화도 좋은 피드백이 나온다<br>
+차분한 상태라면 최대한 빠른 대응을 하는게 좋다<br>
+칭찬이든 지적이든 소통이 되어야 보상받는 느낌이 들테니 꾸물거리지 말자</p>
+<h3 id="공유" style="position:relative;"><a href="#%EA%B3%B5%EC%9C%A0" aria-label="공유 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>공유</h3>
+<p>긍정적 성과는 개인과 전체 둘 다 공유하는게 좋다<br>
+공개 칭찬만 돌리지말고 개인적 성향도 고려하자</p>
+<p> </p>
+<p>객관적 사실과 수정 요구들은 공개적으로 해도 된다<br>
+하지만 그 외 지적은 개인적으로 하고 주어를 명확하게, 객관화된 사실을 말하자<br>
+업무적으로 다른 사람들도 알아야한다면 당사자가 직접 전하게 한다</p>
+<p> </p>
+<p>개인적인 문제(<em>위생상태</em>, <em>소음</em>..)라면 주변인들이 어떤 피해를 입는지, 경력이나 승진에 어떤 영향을 끼칠지 등에 포커스를 맞추는게 낫다</p>
+<h3 id="험담" style="position:relative;"><a href="#%ED%97%98%EB%8B%B4" aria-label="험담 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>험담</h3>
+<p>팀장은 포청천이 아니다</p>
+<p> </p>
+<p>관리자는 팀원을 서포트해주는 자리다<br>
+정치 싸움으로 번지기 쉬우니 당사자끼리 해결하는게 좋다<br>
+정 안되면 삼자대면 하고...</p>
+<hr>
+<h2 id="평가" style="position:relative;"><a href="#%ED%8F%89%EA%B0%80" aria-label="평가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>평가</h2>
+<h3 id="팀원---듣고싶어하는-상사" style="position:relative;"><a href="#%ED%8C%80%EC%9B%90---%EB%93%A3%EA%B3%A0%EC%8B%B6%EC%96%B4%ED%95%98%EB%8A%94-%EC%83%81%EC%82%AC" aria-label="팀원   듣고싶어하는 상사 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>팀원 -> <em>듣고싶어하는</em> 상사</h3>
+<p>상사 지적에 따른 불이익이 없다고 항상 알리자<br>
+대립하고 싸우는건 "<em>더 넓은 기회를 만드는 일</em>"이며 부정적인 일이 아니다.<br>
+<em>바지지퍼가 열린 사람</em> 에게 사실을 말해주는게 더 많은 민망한 상황을 피할 수 있다</p>
+<h3 id="팀원---듣기싫어하는-상사" style="position:relative;"><a href="#%ED%8C%80%EC%9B%90---%EB%93%A3%EA%B8%B0%EC%8B%AB%EC%96%B4%ED%95%98%EB%8A%94-%EC%83%81%EC%82%AC" aria-label="팀원   듣기싫어하는 상사 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>팀원 -> <em>듣기싫어하는</em> 상사</h3>
+<p>까딱 잘못하면..<br>
+이력서 옆구리에 끼고 시작하자</p>
+<ol>
+<li>동료들과 먼저 <code class="language-jstext">완전한 솔직함</code>을 한다</li>
+<li>상사에게 조언을 먼저 요청하고 그 조언에 대한 피드백을 한다</li>
+<li>상사에게! 팀원들이! 조언을 줘도 되는지 물어보자</li>
+<li>결과가 긍정적이라면 계속</li>
+</ol>
+<p>3살 아기 달래듯 하자<br>
+아닌 것 같으면 프로세스 중간이라도 바로 끝내자</p>
+<h3 id="팀장---팀원" style="position:relative;"><a href="#%ED%8C%80%EC%9E%A5---%ED%8C%80%EC%9B%90" aria-label="팀장   팀원 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>팀장 -> 팀원</h3>
+<p>편견과 일반론을 버리고 객관적으로 평가하자<br>
+개인적 편향과 성향을 정확하게 파악하면 착각을 피할 수 있다</p>
+<ul>
+<li><strong>거칠고 무서운 상사</strong><br>
+물러서지 말고, 직접적 대립을 피하지 말자<br>
+남에게 상처줄 가능성은 늘 있다<br>
+사무실의 천사가 되는건 파멸의 지름길이다</li>
+<li><strong>특별 대우 금지</strong><br>
+자신이 원하는 방향과 이유를 충분히 설명한다<br>
+조언과 평가가 어땠는지 팀원들에게 요청하자</li>
+<li><strong>화가 나버린 팀원</strong><br>
+평가내린 이유가 타당한지, 편향되었는지 객관적으로 검토하자</li>
+<li><strong>능력과 호감도</strong><br>
+정확히 구분하자</li>
+</ul>
+<p>깊은 고뇌와 질질 끌리는 생각은 도움되지 않는다<br>
+되도록 20분 이내에 완료하자</p>
+<h3 id="성과-평가" style="position:relative;"><a href="#%EC%84%B1%EA%B3%BC-%ED%8F%89%EA%B0%80" aria-label="성과 평가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>성과 평가</h3>
+<p>서프라이즈, 깜짝 파티 금지</p>
+<ul>
+<li><strong>포기하지마</strong><br>
+너 팀이잖아..<br>
+공식 평가 이전에 정기적으로 꾸준히 이야기하자</li>
+<li><strong>360도 평가</strong><br>
+깎아내리기 경쟁이 아니다<br>
+인당 5분이면 충분히 파악 가능하다</li>
+<li><strong>팀장 평가</strong><br>
+남은 하면서 왜 너는 안해요?</li>
+<li><strong>기록</strong><br>
+더 명확한 전달과 평가를 할 수 있다<br>
+할 말, 했던 말을 복기하며 깨달음을 얻자</li>
+<li><strong>예고장</strong><br>
+사전에 안건과 세부사항 공유<br>
+훨씬 생산적인 면담을 나눌 수 있다</li>
+<li><strong>충분한 시간</strong><br>
+기본 50분 면담 + 쉬는시간 10분<br>
+불필요한 대기시간, 긴장감 조성은 하지말자</li>
+<li><strong>반성 반, 계획 반</strong><br>
+계획을 적어오게 하면 조언의 결과가 어떤지 알 수 있다<br>
+진척사항을 지속적으로 체크하면 더더욱 좋다</li>
+<li><strong>주요 순서</strong><br>
+성과 평가와 계획 수립을 먼저 하자<br>
+관심 받으려면 보상과 점수 알림은 제일 나중에</li>
+</ul>
+<h3 id="팀장없는-팀장-평가" style="position:relative;"><a href="#%ED%8C%80%EC%9E%A5%EC%97%86%EB%8A%94-%ED%8C%80%EC%9E%A5-%ED%8F%89%EA%B0%80" aria-label="팀장없는 팀장 평가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>팀장없는 팀장 평가</h3>
+<p><code class="language-jstext">A</code>-><code class="language-jstext">B</code>-><code class="language-jstext">C</code> 형태의 직급이 있다면 <code class="language-jstext">A</code>의 참관 하에 <code class="language-jstext">C</code>가 <code class="language-jstext">B</code>를 평가하는 자리<br>
+1년에 한 번만 해도 충분</p>
+<p> </p>
+<p>쉽게 변질될 위험이 가득하다. <em>처벌</em>을 위한 회의가 아니라고 강조해야한다.<br>
+가치판단, 뒷담화보다는 개선책을 만들기 위함을 밝히자</p>
+<ul>
+<li><strong>누가 소리를 내었느냐</strong><br>
+무기명은 기본</li>
+<li><strong>날 믿어</strong><br>
+일단 칭찬부터<br>
+지적 먼저 할 수 있는 사람은 많지않다</li>
+<li><strong>우선 순위</strong><br>
+개선할 수 있는 현실적인 방안부터 시작하자</li>
+<li><strong>메모 공유</strong><br>
+경청하는 태도와 어떻게 받아들이는지 보여주기 좋다<br>
+회의 뒤 관리자에게 공유한다면 더 책임감있는 발언을 만들 수 있다</li>
+<li><strong>즉각적 변화</strong><br>
+사소하더라도 해결 가능한 조치부터<br>
+진척 상황을 확인하고 체크하자</li>
+</ul>
+<h4 id="현실적인-팁" style="position:relative;"><a href="#%ED%98%84%EC%8B%A4%EC%A0%81%EC%9D%B8-%ED%8C%81" aria-label="현실적인 팁 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>현실적인 팁</h4>
+<ul>
+<li><strong>침묵한지 0시간 경과</strong><br>
+당연히 불편하다<br>
+분위기를 완화할 수 있는 질문을 하자</li>
+<li><strong>아수라장</strong><br>
+한 명이 입을 안 다물면 다른 사람들의 비언어적 표현을 확인하자<br>
+모두 말하고 싶어하면 우선순위를 정하자<br>
+바꿀 수 있는 것, 없는 것을 구분하자 (<em>개인적 성향은 바꾸기 어렵다</em>)</li>
+<li><strong>무능한 관리자행</strong><br>
+객관적 평가와 지표를 체크하자<br>
+그리고 정말 능력있는 사람인지</li>
+</ul>
+<p>대상이 된 관리자를 회의 자리에서 옹호하거나 욕하지 말자<br>
+공감은 하되 늘 한 발자국 떨어진 자리에서 이야기해야한다</p>
+<p> </p>
+<h3 id="부록" style="position:relative;"><a href="#%EB%B6%80%EB%A1%9D" aria-label="부록 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>부록</h3>
+<h4 id="조언의-필수-덕목" style="position:relative;"><a href="#%EC%A1%B0%EC%96%B8%EC%9D%98-%ED%95%84%EC%88%98-%EB%8D%95%EB%AA%A9" aria-label="조언의 필수 덕목 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>조언의 필수 덕목</h4>
+<ol>
+<li>목격한 상황</li>
+<li>행동</li>
+<li>드러난 영향</li>
+</ol>
+<p>객관적인 사실만 가져오자<br>
+듣는 사람이 왜곡할 수 있는 조언은 없으니만 못하다<br>
+자신의 의도와 뱉은 말의 간극을 살펴봐야한다</p>
+<h4 id="도움의-덕목" style="position:relative;"><a href="#%EB%8F%84%EC%9B%80%EC%9D%98-%EB%8D%95%EB%AA%A9" aria-label="도움의 덕목 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>도움의 덕목</h4>
+<ol>
+<li><strong>의도 밝히기</strong><br>
+널 조지러 지옥에서 온 상사가 아님을 알려라<br>
+선한 의도와 겸손함을 보이자</li>
+<li><strong>말보다 행동</strong><br>
+일장연설 금지<br>
+명백한 평가와 깔끔한 조언을 하자</li>
+<li><strong>조언은 선물</strong><br>
+해결책이 없다고 망설이지 말자.<br>
+의견을 나누는 것만으로도 충분한 도움이 된다</li>
+</ol>
+<h4 id="자기객관화" style="position:relative;"><a href="#%EC%9E%90%EA%B8%B0%EA%B0%9D%EA%B4%80%ED%99%94" aria-label="자기객관화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>자기객관화</h4>
+<ul>
+<li>나는 좋은 사람이니까!</li>
+<li>직원들과 매일 점심을 같이 먹으니까!</li>
+</ul>
+<p>당연하게 팀원들이 팀장을 긍정적으로 생각하거나 자동적으로 신뢰할거라고 생각하지 말자</p></section></article></main><style data-emotion="css 885am6">.css-885am6{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-around;-ms-flex-pack:space-around;-webkit-justify-content:space-around;justify-content:space-around;max-width:45rem;margin:3rem auto 0;padding:5rem 0;border-top:2px solid #e9e9e9;}</style><footer class="css-885am6"><a href="/portfolio/">Portfolio</a><a href="https://github.com/ejayyy" target="_blank" rel="noreferrer"><img class="logo github" alt="logo"/>GitHub</a><a href="https://leetcode.com/ejayyy/" target="_blank" rel="noreferrer"><img class="logo leetcode" alt="logo"/>Leetcode</a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/radical-candor3/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-cdc48a8dc3af232e1ce3.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-9e7aa23b6e33f5e6ace8.js\"],\"component---src-components-blog-post-js\":[\"/component---src-components-blog-post-js-ca371a9328bca0ac5d31.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-97d307a8a69cb4616a6b.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-95d5a8b89b82d0be0727.js\"],\"component---src-pages-portfolio-js\":[\"/component---src-pages-portfolio-js-b5e2e31622792681ac7f.js\"],\"component---src-pages-tag-js\":[\"/component---src-pages-tag-js-c989c8820ccfb8233264.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="8009c3a28d6b5361571a";</script><script src="/webpack-runtime-57beadaceb60b8138ee2.js" async></script><script src="/framework-517f29c6a5ca915036b0.js" async></script><script src="/app-cdc48a8dc3af232e1ce3.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
