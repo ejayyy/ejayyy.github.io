@@ -8,8 +8,9 @@ export default function Footer({ maxWidth }) {
                 display: flex;
                 justify-content: space-around;
                 max-width: ${maxWidth}rem;
-                margin: 0 auto;
-                padding: 3rem 0;
+                margin: 3rem auto 0;
+                padding: 5rem 0;
+                border-top: 2px solid #e9e9e9;
             `}>
             <Link to="/portfolio">Portfolio</Link>
             <a href="https://github.com/ejayyy" target="_blank" rel="noreferrer">
