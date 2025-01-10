@@ -6,78 +6,113 @@ import Seo from "../components/seo"
 export default function Portfolio() {
   const projects = [
     {
-      title: "업소록",
-      sub: "등록된 상점이나 서비스 검색, 수정 요청 및 리뷰",
-      date: "2023.10 ~",
-      env: ["NextJS", "Prisma", "MSSQL", "CPanel"],
-      desc: [
-        "상점 등록 및 업데이트를 위한 정보 요청 구현",
-        "자체 광고를 위한 내부 등록툴 수정 및 최적화",
-      ],
-    },
-    {
-      title: "학생미술공모전",
+      title: "학생 미술 공모전",
       sub: "매년 개최되는 공모전 접수 및 홍보 사이트",
-      date: "2022.08 ~",
-      env: ["PHP", "Laravel", "MySQL", "CPanel"],
+      date: "2022.08 ~ 2024.10",
+      env: ["PHP 8", "Laravel 10", "Vue", "MySQL", "CPanel", "Docker", "GitLab", "Notion"],
       desc: [
-        "공모전 접수 양식 구현 및 이미지 thumbnail 생성, 부분 결제 개발",
-        "사이트 컨텐츠 조작을 위한 내부 관리자 페이지 제작",
+        "담당자와의 협업을 통한 데이터 설계 및 가공을 통한 데이터 최적화",
+        "메인 사이트와 사이트 컨텐츠 조작을 위한 내부 관리자 페이지 제작",
+        "큰 이미지 thumbnail 처리 및 component 재사용으로 웹사이트 최적화",
+        "제휴 할인과 단체 할인, 부분 결제 등의 예외처리를 통한 결제 시스템 구축",
+        "기획부터 설계까지 참여하여 최종 Production 런칭",
+        "담당자와 시스템 방향 설정 및 조율을 통한 일정 관리",
       ],
     }, {
-      title: "티켓 예매 시스템",
-      sub: "이벤트 관리 및 좌석 입력, 주문 등의 관리자 페이지",
-      date: "2023.01 ~ 2023.10",
-      env: ["PHP", "MySQL", "CPanel", "ASP", "IIS"],
+      title: "티켓 판매 시스템",
+      sub: "이벤트 관리 및 좌석 입력, 주문 등의 관리자, 판매 페이지",
+      env: ["PHP 8", "Laravel 11", "Vue", "MySQL", "CPanel", "Docker", "GitLab", "Notion"],
+      date: "2023.11 ~ 2024.10",
       desc: [
         "판매 페이지에서 좌석 선택 및 홀드 기능 추가 및 선점 좌석 자동 해제 구현",
         "주문 수정, 취소 등의 변경과 판매 데이터, 좌석 수정 등의 기능 제작",
+        "기존 메뉴얼 분석 및 시스템, DB 설계와 기존 데이터 migration 완료",
+        "Authorize.net 모듈을 이용한 결제 시스템 구축",
+        "개발 스펙&일정 조율을 위한 프로젝트 매니징과 커뮤니케이션",
+      ],
+    }, {
+      title: "패밀리 사이트 유지보수",
+      sub: "현재 운영 중인 웹사이트 및 이벤트 페이지 제작, 유지보수",
+      env: ["PHP", "Laravel", "C#", "ASP.Net", "MSSQL", "MySQL", "IIS", "Windows Server", "GitLab", "Notion"],
+      date: "2022.08 ~ 2024.10",
+      desc: [
+        "이슈 분석 및 해결 방안 모색",
+        "신규 기능 도입 시 기존 시스템과 융화되도록 유지보수",
+        "구글 광고 인덱싱 오류 및 가이드라인에 맞추어 개발, 수정",
       ],
     },
-    {
-      title: "판매 채널 주문 관리",
-      sub: "Rest API를 활용한 판매 채널들의 상품, 주문 내역 수집 및 업데이트",
-      date: "2020.08 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx"],
-      desc: [
-        "Linked server를 사용한 쿼리 작업 수행",
-        "Amazon, Yahoo, Rakuten, Coupang API 분석 및 적용",
-      ],
-    }
     , {
-      title: "배송 관리",
+      title: "글로벌 배송 관리 시스템",
       sub: "배송 정보 및 송장 번호, 재고 상태 확인 및 상태 업데이트 관리",
+      date: "2020.08 ~ 2022.05",
+      env: ["PHP 7", "CodeIgnitor 3", "Java", "WDSL", "MSSQL", "Nginx", "Docker", "Linux", "Github", "Notion"],
+      desc: [
+        "Amazon japan, Yahoo, Rakuten, Qten API 분석 및 주문, 상품 저장 배치 제작",
+        "내부 기록용 엑셀 및 물류 회사 포맷 파일 제작",
+        "송장번호, 주문 상태 변경 등의 기능 개발",
+        "Linked server를 사용한 쿼리 작업 수행",
+        "Regex를 통한 고객 데이터 예외 처리 및 필터 제작",
+      ]
+    },
+    {
+      title: "세일즈 채널 관리 시스템",
+      sub: "Rest API를 활용한 판매 채널의 상품, 주문 내역 수집 및 업데이트",
       date: "2021.04 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx"],
+      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx", "Docker", "Linux", "Github", "Notion"],
       desc: [
         "판매량, 재고관리 등의 데이터 수집 및 통계 데이터 노출",
+        "REST API를 통한 주문, 상품 CRUD 시스템 개발",
+        "내부 inventory 시스템과 동기화하는 배치 제작",
+        "판매 데이터 기반 통계 차트 생성 및 데이터 조작",
+      ],
+    },
+    {
+      title: "Shopify 쇼핑몰 revamp",
+      sub: "Shopify 전용 store theme 제작 및 유지보수",
+      date: "2020.01 ~ 2020.05",
+      env: ["Shopify Liquid", "Javascript", "SCSS", "Trello", "Monday.com"],
+      desc: [
+        "Mockup image를 토대로 UI, UX 제작",
+        "Zoho API를 이용한 FAQ 제작",
+        "Screen Dimension에 맞는 SCSS 설계",
+        "ScrollMagic js를 사용한 이벤트 랜딩 페이지 제작",
       ]
     },
     {
-      title: "Shopify Theme",
-      sub: "Shopify 전용 store theme 제작 및 유지보수",
-      date: "2019.01 ~ 2020.06",
-      env: ["Liquid", "Shopify", "SCSS"],
+      title: "패밀리 사이트 유지보수",
+      sub: "Shopify store 유지보수",
+      date: "2019.09 ~ 2020.05",
+      env: ["Shopify Liquid", "Javascript", "SCSS", "Trello", "Monday.com"],
       desc: [
-        "디자이너와 UI, UX를 중점으로 한 dimension 기반 설계 및 개발",
-        "ScrollMagic js, Zoho Desk API 사용",
+        "담당자의 요청에 따른 신규 기능 설계 및 제작",
+        "웹 페이지, Component 최적화 및 버그 수정",
       ]
     }, {
-      title: "Network data loss prevention system",
+      title: "네트워크 데이터 누출 방지 시스템",
       sub: "저장된 데이터를 가공하여 사용자에게 데이터 제공",
       date: "2016.10 ~ 2018.02",
-      env: ["Java 8", "Spring 5", "Postgresql", "JSP", "Linux", "Tomcat 8"],
+      env: ["Java 8", "Spring 4", "Postgresql", "MyBatis", "JSP", "Tomcat 8", "Linux", "GitLab", "Redmine"],
       desc: [
-        "모듈에서 인덱싱한 데이터를 오픈하여 읽거나 추출하는 기능",
-        "통계를 위한 데이터 기반 그래프 제작 및 엑셀 추출",
+        "Lucene에서 인덱싱한 데이터를 오픈하여 읽거나 추출하는 기능",
+        "검색 질의를 위한 상세 필터 시스템 제작",
+        "수집된 데이터 통계 및 차트, 보고서 제작",
       ]
     }, {
-      title: "SSL decryption solution",
+      title: "SSL 복호화 시스템",
+      sub: "GS 인증 1등급 획득",
       date: "2017.10 ~ 2018.02",
-      env: ["Java 8", "Spring 5", "Postgresql", "JPA", "JSP", "Linux", "Tomcat 8"],
+      env: ["Java 8", "Spring 5", "Postgresql", "Hibernate", "JPA", "Tomcat 8", "Linux", "GitLab"],
       desc: [
         "REST API를 기반으로 모듈과 데이터 상호교환",
         "사용자가 조작한 값을 모듈에게 전송하거나 차단한 기록을 읽어 결과 도출",
+        "GS인증을 위한 SQL injection 공격 등의 예방 시스템 제작",
+      ],
+    }, {
+      title: "사내 시스템 유지보수",
+      date: "2017.10 ~ 2018.02",
+      env: ["Java", "MSSQL", "JSP", "SVN", "Redmine"],
+      desc: [
+        "내부 시스템 유지보수 및 버그 수정",
       ],
     }
   ]
