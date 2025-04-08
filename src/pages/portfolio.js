@@ -8,33 +8,30 @@ export default function Portfolio() {
     {
       title: "학생 미술 공모전",
       sub: "매년 개최되는 공모전 접수 및 홍보 사이트",
-      date: "2022.08 ~ 2024.10",
-      env: ["PHP 8", "Laravel 10", "Vue", "MySQL", "CPanel", "Docker", "GitLab", "Notion"],
+      env: ["PHP", "Laravel", "Vue.js", "MySQL", "Docker"],
       desc: [
-        "담당자와의 협업을 통한 데이터 설계 및 가공을 통한 데이터 최적화",
+        "프로젝트 기획부터 프로덕션 런칭까지 전 과정 담당",
         "메인 사이트와 사이트 컨텐츠 조작을 위한 내부 관리자 페이지 제작",
-        "큰 이미지 thumbnail 처리 및 component 재사용으로 웹사이트 최적화",
         "제휴 할인과 단체 할인, 부분 결제 등의 예외처리를 통한 결제 시스템 구축",
-        "기획부터 설계까지 참여하여 최종 Production 런칭",
+        "큰 이미지 thumbnail 처리 및 component 재사용으로 웹사이트 최적화",
+        "담당자와의 협업을 통한 데이터 설계 및 가공을 통한 데이터 최적화",
         "담당자와 시스템 방향 설정 및 조율을 통한 일정 관리",
       ],
     }, {
       title: "티켓 판매 시스템",
       sub: "이벤트 관리 및 좌석 입력, 주문 등의 관리자, 판매 페이지",
-      env: ["PHP 8", "Laravel 11", "Vue", "MySQL", "CPanel", "Docker", "GitLab", "Notion"],
-      date: "2023.11 ~ 2024.10",
+      env: ["PHP", "Laravel", "Vue.js", "MySQL", "Docker"],
       desc: [
-        "판매 페이지에서 좌석 선택 및 홀드 기능 추가 및 선점 좌석 자동 해제 구현",
+        "좌석 선택 및 홀드 기능 추가 및 선점 좌석 자동 해제 구현",
         "주문 수정, 취소 등의 변경과 판매 데이터, 좌석 수정 등의 기능 제작",
-        "기존 메뉴얼 분석 및 시스템, DB 설계와 기존 데이터 migration 완료",
-        "Authorize.net 모듈을 이용한 결제 시스템 구축",
-        "개발 스펙&일정 조율을 위한 프로젝트 매니징과 커뮤니케이션",
+        "Authorize.net SDK를 이용한 결제 시스템 구축",
+        "기존 시스템 분석 및 데이터 구조 설계와 기존 데이터 migration 완료",
+        "일정 조율을 위한 프로젝트 매니징과 커뮤니케이션",
       ],
     }, {
       title: "패밀리 사이트 유지보수",
       sub: "현재 운영 중인 웹사이트 및 이벤트 페이지 제작, 유지보수",
-      env: ["PHP", "Laravel", "C#", "ASP.Net", "MSSQL", "MySQL", "IIS", "Windows Server", "GitLab", "Notion"],
-      date: "2022.08 ~ 2024.10",
+      env: ["C#", "ASP.Net", "PHP", "Laravel", "MSSQL", "MySQL"],
       desc: [
         "이슈 분석 및 해결 방안 모색",
         "신규 기능 도입 시 기존 시스템과 융화되도록 유지보수",
@@ -43,74 +40,71 @@ export default function Portfolio() {
     },
     , {
       title: "글로벌 배송 관리 시스템",
-      sub: "배송 정보 및 송장 번호, 재고 상태 확인 및 상태 업데이트 관리",
-      date: "2020.08 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor 3", "Java", "WDSL", "MSSQL", "Nginx", "Docker", "Linux", "Github", "Notion"],
+      sub: "일본 판매 채널 관리",
+      env: ["PHP", "CodeIgnitor", "Java", "MSSQL", "Docker"],
       desc: [
-        "Amazon japan, Yahoo, Rakuten, Qten API 분석 및 주문, 상품 저장 배치 제작",
-        "내부 기록용 엑셀 및 물류 회사 포맷 파일 제작",
+        "Amazon japan, Yahoo, Rakuten, Qten API 분석 및 데이터 저장 배치 제작",
         "송장번호, 주문 상태 변경 등의 기능 개발",
+        "내부 기록용 엑셀 및 물류 회사 포맷 파일 제작",
+        "Regex를 통한 고객 데이터 예외 처리 및 필터 시스템 개발",
         "Linked server를 사용한 쿼리 작업 수행",
-        "Regex를 통한 고객 데이터 예외 처리 및 필터 제작",
       ]
     },
     {
       title: "세일즈 채널 관리 시스템",
-      sub: "Rest API를 활용한 판매 채널의 상품, 주문 내역 수집 및 업데이트",
-      date: "2021.04 ~ 2022.05",
-      env: ["PHP 7", "CodeIgnitor3", "MSSQL", "Nginx", "Docker", "Linux", "Github", "Notion"],
+      sub: "Rest API를 활용한 판매 채널 관리",
+      env: ["PHP", "CodeIgnitor", "MSSQL", "Docker"],
       desc: [
-        "판매량, 재고관리 등의 데이터 수집 및 통계 데이터 노출",
-        "REST API를 통한 주문, 상품 CRUD 시스템 개발",
-        "내부 inventory 시스템과 동기화하는 배치 제작",
+        "판매량 및 재고관리 등의 데이터 수집과 통계 처리 구현",
         "판매 데이터 기반 통계 차트 생성 및 데이터 조작",
+        "내부 인벤토리 시스템과 동기화하는 배치 제작",
+        "Rest API를 활용한 판매 채널의 상품, 주문 개발",
       ],
     },
     {
-      title: "Shopify 쇼핑몰 revamp",
-      sub: "Shopify 전용 store theme 제작 및 유지보수",
-      date: "2020.01 ~ 2020.05",
-      env: ["Shopify Liquid", "Javascript", "SCSS", "Trello", "Monday.com"],
+      title: "Shopify storefront 개편",
+      sub: "신규 홈페이지 설계 및 제작",
+      env: ["Liquid", "Javascript", "SCSS"],
       desc: [
+        "다양한 디바이스와 해상도에 최적화된 반응형 UI 구현",
         "Mockup image를 토대로 UI, UX 제작",
+        "사용자 중심의 화면 설계 및 개선",
         "Zoho API를 이용한 FAQ 제작",
-        "Screen Dimension에 맞는 SCSS 설계",
-        "ScrollMagic js를 사용한 이벤트 랜딩 페이지 제작",
+        "개별 컴포넌트 최적화 및 버그 수정",
       ]
     },
     {
       title: "패밀리 사이트 유지보수",
       sub: "Shopify store 유지보수",
-      date: "2019.09 ~ 2020.05",
-      env: ["Shopify Liquid", "Javascript", "SCSS", "Trello", "Monday.com"],
+      env: ["Liquid", "Javascript", "SCSS"],
       desc: [
         "담당자의 요청에 따른 신규 기능 설계 및 제작",
+        "ScrollMagic js를 사용한 이벤트 랜딩 페이지 제작",
         "웹 페이지, Component 최적화 및 버그 수정",
       ]
     }, {
       title: "네트워크 데이터 누출 방지 시스템",
       sub: "저장된 데이터를 가공하여 사용자에게 데이터 제공",
-      date: "2016.10 ~ 2018.02",
-      env: ["Java 8", "Spring 4", "Postgresql", "MyBatis", "JSP", "Tomcat 8", "Linux", "GitLab", "Redmine"],
+      env: ["Java", "Spring", "Postgresql", "MyBatis", "JSP"],
       desc: [
-        "Lucene에서 인덱싱한 데이터를 오픈하여 읽거나 추출하는 기능",
-        "검색 질의를 위한 상세 필터 시스템 제작",
-        "수집된 데이터 통계 및 차트, 보고서 제작",
+        "인덱싱된 데이터의 압축 해제, 읽기 및 추출 기능 개발",
+        "데이터 검색을 위한 상세 필터 시스템 구현",
+        "수집된 데이터 기반 통계, 차트 및 보고서 생성",
+        "자동 발송을 위한 이메일 스케줄러 개발",
       ]
     }, {
       title: "SSL 복호화 시스템",
       sub: "GS 인증 1등급 획득",
-      date: "2017.10 ~ 2018.02",
-      env: ["Java 8", "Spring 5", "Postgresql", "Hibernate", "JPA", "Tomcat 8", "Linux", "GitLab"],
+      env: ["Java", "Spring", "Postgresql", "Hibernate", "JPA"],
       desc: [
-        "REST API를 기반으로 모듈과 데이터 상호교환",
-        "사용자가 조작한 값을 모듈에게 전송하거나 차단한 기록을 읽어 결과 도출",
-        "GS인증을 위한 SQL injection 공격 등의 예방 시스템 제작",
+        "네트워크 모듈과 REST API를 활용한 데이터 연동",
+        "모듈 로그 기록 및 차단 내역 모니터링 기능 개발",
+        "SQL Injection 등 보안 취약점 방지 기능 추가",
+        "데이터 전송 및 처리 과정에서의 보안 강화 적용",
       ],
     }, {
       title: "사내 시스템 유지보수",
-      date: "2017.10 ~ 2018.02",
-      env: ["Java", "MSSQL", "JSP", "SVN", "Redmine"],
+      env: ["Java", "MSSQL", "JSP", "SVN"],
       desc: [
         "내부 시스템 유지보수 및 버그 수정",
       ],
@@ -125,7 +119,8 @@ export default function Portfolio() {
         <ol>
           {projects.map((x, i) =>
             <li id={i}>
-              <h5>{x.title}<small css={css`font-weight:300;margin-left:.5rem;`}>({x.date})</small></h5>
+              <h5>{x.title}</h5>
+              {x.sub && <p>{x.sub}</p>}
               <div css={css`display:flex;
                 align-items:center;
                 gap:.5rem;
@@ -141,7 +136,6 @@ export default function Portfolio() {
                     border-radius:.3rem;`}
                 >{env}</span>)}
               </div>
-              {x.sub && <p>{x.sub}</p>}
               <ul>
                 {x.desc.map((desc, i) => <li id={i}>{desc}</li>)}
               </ul>
