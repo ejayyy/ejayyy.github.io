@@ -14,8 +14,8 @@ spoiler: 언제든 오늘이 제일 빠른 날
 # 어디 체크리스트 한 번
 1. 이력서
     - [x] [원티드](https://www.wanted.co.kr/community/profile/j8P6yTcE6WqtRxpfstRRKe)
-    - [ ] 사람인
-    - [ ] 잡코리아
+    - [x] 사람인
+    - [x] 잡코리아
     - ~~[링크드인](https://www.linkedin.com/in/ej-h-b8b2a9203/) 상세 기술~~
     - ~~블로그~~
 1. 포트폴리오
@@ -26,9 +26,9 @@ spoiler: 언제든 오늘이 제일 빠른 날
     - 괜찮다 예전보단 말 잘할거야 hopefully
     - [ ] PHP, Laravel
     - [ ] DB, SQL
-    - [ ] Structure
-    - [ ] Pattern
-    - [ ] 인적성
+    - [x] Structure
+    - [x] Pattern
+    - ~~[ ] 인적성~~
 1. 알고리즘 풀이
     - 사실 알고리즘 선행없이 무조건 풀고보니까 어렵고 재미없다
     - [ ] 일단 어느정도 쉬운건 풀어봤으니까 미디움부터
