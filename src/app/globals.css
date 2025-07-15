@@ -13,11 +13,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme when dark class is present */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
@@ -27,7 +26,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Ensure dark theme is applied when dark class is present */
+.dark body {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 /* Smooth transitions for theme switching */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
