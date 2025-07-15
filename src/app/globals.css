@@ -7,21 +7,6 @@
   --color-background-dark: #0a0a0a;
   --color-foreground-light: #171717;
   --color-foreground-dark: #ededed;
-
-  --font-family-sans: var(
-    --font-geist-sans,
-    ui-sans-serif,
-    system-ui,
-    sans-serif
-  );
-  --font-family-mono: var(
-    --font-geist-mono,
-    ui-monospace,
-    "Cascadia Code",
-    "Roboto Mono",
-    monospace
-  );
-
   --transition-colors: background-color 0.3s ease, color 0.3s ease,
     border-color 0.3s ease;
 }
@@ -40,11 +25,37 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-family-sans);
+    font-family: var(--font-ibm-plex-sans-kr);
     transition: var(--transition-colors);
   }
 
   * {
     transition: var(--transition-colors);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-medium);
+  }
+  h2 {
+    font-size: var(--text-2xl);
+  }
+  h3 {
+    font-size: var(--text-xl);
+  }
+  h4 {
+    font-size: var(--text-lg);
+  }
+  h5 {
+    font-size: var(--text-base);
+  }
+  h6 {
+    font-size: var(--text-sm);
+  }
+  a {
+    color: var(--color-indigo-600);
+  }
+  ul {
+    @apply list-disc list-inside;
   }
 }
