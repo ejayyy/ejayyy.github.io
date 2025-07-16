@@ -56,6 +56,19 @@
     color: var(--color-indigo-600);
   }
   ul {
-    @apply list-disc list-inside;
+    @apply list-disc list-outside ml-3 pl-3 py-1;
+  }
+  ol {
+    @apply list-decimal list-outside ml-3 pl-3 py-1;
+  }
+  hr {
+    @apply my-8;
+  }
+  code,
+  pre {
+    @apply font-(family-name:--font-source-code-pro) p-1.5 my-1.5 mx-1 rounded-md;
+  }
+  blockquote {
+    @apply border-l-4 border-fuchsia-400 dark:border-fuchsia-500 pl-3 pr-2 py-2 m-2 bg-slate-300 dark:bg-slate-700;
   }
 }
