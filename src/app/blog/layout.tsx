@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Header from "@/components/Header";
 
 export default function BlogLayout({
   children,
@@ -6,8 +6,11 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="prose prose-gray dark:prose-invert max-w-none">
-      {children}
-    </section>
+    <>
+      <Header />
+      <section className="prose prose-gray dark:prose-invert max-w-none">
+        {children}
+      </section>
+    </>
   );
 }

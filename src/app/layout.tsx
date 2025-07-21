@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_KR, Orbit, Source_Code_Pro } from "next/font/google";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -42,7 +41,6 @@ export default function RootLayout({
         className={`${ibmPlexSansKR.variable} ${sourceCodePro.variable} ${orbit.variable}`}
       >
         <div className="max-w-3xl mx-auto px-4 py-8">
-          <Header />
           {children}
           <Footer />
         </div>

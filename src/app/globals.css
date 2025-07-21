@@ -83,9 +83,6 @@
   ol {
     @apply list-decimal list-outside ml-3 pl-3 py-1;
   }
-  li {
-    @apply mb-1;
-  }
   hr {
     @apply my-8;
   }
