@@ -16,6 +16,7 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  fallback: ["Orbit"],
 });
 
 const orbit = Orbit({

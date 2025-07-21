@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { CustomPre, CustomCode } from "@/components/CodeBlock";
 
 export default async function Page({
   params,
@@ -16,6 +17,12 @@ export default async function Page({
 
   // Parse frontmatter and content
   const { data: frontmatter, content } = matter(fileContent);
+
+  // MDX components for custom rendering
+  const components = {
+    pre: CustomPre,
+    code: CustomCode,
+  };
 
   return (
     <div className="space-y-8">
@@ -41,7 +48,7 @@ export default async function Page({
         )}
       </div>
       <div className="prose prose-gray dark:prose-invert max-w-none">
-        <MDXRemote source={content} />
+        <MDXRemote source={content} components={components} />
       </div>
     </div>
   );

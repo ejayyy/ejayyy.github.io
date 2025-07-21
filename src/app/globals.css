@@ -83,47 +83,60 @@
   ol {
     @apply list-decimal list-outside ml-3 pl-3 py-1;
   }
-  li{
+  li {
     @apply mb-1;
   }
   hr {
     @apply my-8;
-  }
-  code,
-  pre {
-    @apply font-(family-name:--font-source-code-pro) p-1.5 my-1.5 mx-1 rounded-md;
   }
   blockquote {
     @apply border-l-4 border-fuchsia-400 dark:border-fuchsia-500 pl-3 pr-2 py-2 m-2 bg-slate-300 dark:bg-slate-700;
   }
 }
 
-.main-link {
-  @apply text-slate-700 flex justify-between mx-auto items-end;
-
-  @variant before {
-    @apply bg-rose-500;
-  }
-
-  @variant hover {
-    @apply text-inherit;
+@layer components {
+  .main-link {
+    @apply text-slate-700 flex justify-between mx-auto items-end;
 
     @variant before {
       @apply bg-rose-500;
     }
-  }
-
-  @variant dark {
-    @apply text-slate-300;
-
-    @variant before {
-      @apply bg-rose-300;
-    }
 
     @variant hover {
+      @apply text-inherit;
+
+      @variant before {
+        @apply bg-rose-500;
+      }
+    }
+
+    @variant dark {
+      @apply text-slate-300;
+
       @variant before {
         @apply bg-rose-300;
       }
+
+      @variant hover {
+        @variant before {
+          @apply bg-rose-300;
+        }
+      }
     }
+  }
+
+  .syntax-highlighter {
+    @apply my-6 mx-1 rounded-md !text-sm !leading-5;
+  }
+
+  .syntax-highlighter-code {
+    @apply font-(family-name:--font-source-code-pro) text-sm;
+  }
+
+  .syntax-highlighter .linenumber {
+    @apply mr-4 border-r;
+  }
+  .syntax-highlighter.inline-code {
+    @apply !m-0 !p-1 align-middle;
   }
 }
