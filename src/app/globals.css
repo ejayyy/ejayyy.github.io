@@ -3,10 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-background-light: #ffffff;
-  --color-background-dark: #0a0a0a;
-  --color-foreground-light: #171717;
-  --color-foreground-dark: #ededed;
+  --color-background-light: theme(colors.neutral.100);
+  --color-background-dark: theme(colors.neutral.800);
+  --color-foreground-light: theme(colors.neutral.800);
+  --color-foreground-dark: theme(colors.neutral.100);
   --transition-colors: background-color 0.3s ease, color 0.3s ease,
     border-color 0.3s ease;
 }
@@ -27,7 +27,7 @@
     color: var(--color-foreground);
     font-family: var(--font-ibm-plex-sans-kr);
     transition: var(--transition-colors);
-    @apply leading-7;
+    @apply leading-7 antialiased;
   }
 
   * {
@@ -90,7 +90,7 @@
     @apply my-8;
   }
   blockquote {
-    @apply border-l-4 border-fuchsia-400 dark:border-fuchsia-500 pl-3 pr-2 py-2 m-2 bg-slate-300 dark:bg-slate-700;
+    @apply border-l-4 border-teal-400 dark:border-teal-600 pl-3 pr-2 py-2 m-2 bg-teal-200 dark:bg-teal-800;
   }
 }
 
