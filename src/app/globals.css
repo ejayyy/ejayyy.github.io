@@ -53,8 +53,21 @@
     font-size: var(--text-sm);
   }
   a {
-    color: var(--color-indigo-600);
+    @apply relative no-underline text-indigo-600 transition-colors duration-300 ease-out;
+
+    @variant before {
+      @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-[width] duration-300 ease-out;
+    }
+
+    @variant hover {
+      @apply text-lime-600 before:w-full before:bg-lime-500;
+    }
+
+    @variant dark {
+      @apply text-indigo-400 before:bg-lime-300 hover:text-lime-400 hover:before:bg-lime-300;
+    }
   }
+
   ul {
     @apply list-disc list-outside ml-3 pl-3 py-1;
   }
@@ -70,5 +83,35 @@
   }
   blockquote {
     @apply border-l-4 border-fuchsia-400 dark:border-fuchsia-500 pl-3 pr-2 py-2 m-2 bg-slate-300 dark:bg-slate-700;
+  }
+}
+
+.main-link {
+  @apply text-slate-700 flex justify-between items-end max-w-1/2;
+
+  @variant before {
+    @apply bg-rose-500;
+  }
+
+  @variant hover {
+    @apply text-inherit;
+
+    @variant before {
+      @apply bg-rose-500;
+    }
+  }
+
+  @variant dark {
+    @apply text-slate-300;
+
+    @variant before {
+      @apply bg-rose-300;
+    }
+
+    @variant hover {
+      @variant before {
+        @apply bg-rose-300;
+      }
+    }
   }
 }
