@@ -1,40 +1,34 @@
 {
-    "name": "ejayyy.blog",
-    "private": true,
-    "version": "0.1.1",
-    "license": "0BSD",
-    "scripts": {
-        "deploy": "gatsby build && gh-pages -d public",
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-    },
-    "dependencies": {
-        "@emotion/core": "^11.0.0",
-        "@emotion/react": "^11.11.4",
-        "@emotion/styled": "^11.11.0",
-        "gatsby": "^5.14.1",
-        "gatsby-omni-font-loader": "^2.0.2",
-        "gatsby-plugin-emotion": "^8.13.1",
-        "gatsby-plugin-manifest": "^5.13.1",
-        "gatsby-plugin-offline": "^6.13.1",
-        "gatsby-plugin-react-helmet": "^6.13.1",
-        "gatsby-plugin-sharp": "^5.13.1",
-        "gatsby-remark-autolink-headers": "^6.13.1",
-        "gatsby-remark-images": "^7.13.1",
-        "gatsby-remark-prismjs": "^7.13.1",
-        "gatsby-source-filesystem": "^5.13.1",
-        "gatsby-transformer-remark": "^6.13.1",
-        "prismjs": "^1.29.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-helmet": "^6.1.0"
-    },
-    "devDependencies": {
-        "gh-pages": "^6.1.1",
-        "prettier": "^3.2.5"
-    }
+  "name": "mySweetLittleBlog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.4",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.5",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "gray-matter": "^4.0.3",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }

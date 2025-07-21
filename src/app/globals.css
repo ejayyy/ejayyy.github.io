@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background-light: theme(colors.neutral.100);
+  --color-background-dark: theme(colors.neutral.800);
+  --color-foreground-light: theme(colors.neutral.800);
+  --color-foreground-dark: theme(colors.neutral.100);
+  --transition-colors: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+@layer base {
+  :root {
+    --color-background: var(--color-background-light);
+    --color-foreground: var(--color-foreground-light);
+  }
+
+  .dark {
+    --color-background: var(--color-background-dark);
+    --color-foreground: var(--color-foreground-dark);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-ibm-plex-sans-kr);
+    transition: var(--transition-colors);
+    @apply leading-7 antialiased;
+  }
+
+  * {
+    transition: var(--transition-colors);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium mt-5 mb-3;
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+  }
+  h2 {
+    font-size: var(--text-2xl);
+  }
+  h3 {
+    font-size: var(--text-xl);
+  }
+  h4 {
+    font-size: var(--text-lg);
+  }
+  h5 {
+    font-size: var(--text-base);
+  }
+  h6 {
+    font-size: var(--text-sm);
+  }
+  a {
+    @apply relative no-underline text-indigo-600 transition-colors duration-300 ease-out;
+
+    @variant before {
+      @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-lime-500 transition-[width] duration-300 ease-out;
+    }
+
+    @variant hover {
+      @apply text-lime-600 before:w-full before:bg-lime-500;
+    }
+
+    @variant dark {
+      @apply text-indigo-400 before:bg-lime-300 hover:text-lime-400 hover:before:bg-lime-300;
+    }
+  }
+
+  ul {
+    @apply list-disc list-outside ml-3 pl-3 py-1;
+  }
+  ol {
+    @apply list-decimal list-outside ml-3 pl-3 py-1;
+  }
+  hr {
+    @apply my-8;
+  }
+  blockquote {
+    @apply border-l-4 border-teal-400 dark:border-teal-600 pl-3 pr-2 py-2 m-2 bg-teal-200 dark:bg-teal-800;
+  }
+}
+
+@layer components {
+  .main-link {
+    @apply text-slate-700 flex justify-between mx-auto items-end;
+
+    @variant before {
+      @apply bg-rose-500;
+    }
+
+    @variant hover {
+      @apply text-inherit;
+
+      @variant before {
+        @apply bg-rose-500;
+      }
+    }
+
+    @variant dark {
+      @apply text-slate-300;
+
+      @variant before {
+        @apply bg-rose-300;
+      }
+
+      @variant hover {
+        @variant before {
+          @apply bg-rose-300;
+        }
+      }
+    }
+  }
+
+  .syntax-highlighter {
+    @apply my-6 mx-1 rounded-md !text-sm !leading-5;
+  }
+
+  .syntax-highlighter-code {
+    @apply font-(family-name:--font-source-code-pro) text-sm;
+  }
+
+  .syntax-highlighter .linenumber {
+    @apply mr-4 border-r;
+  }
+  .syntax-highlighter.inline-code {
+    @apply !m-0 !p-1 align-middle;
+  }
+}
