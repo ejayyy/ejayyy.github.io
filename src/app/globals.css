@@ -27,15 +27,24 @@
     color: var(--color-foreground);
     font-family: var(--font-ibm-plex-sans-kr);
     transition: var(--transition-colors);
+    @apply leading-7;
   }
 
   * {
     transition: var(--transition-colors);
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium mt-5 mb-3;
+  }
+
   h1 {
     font-size: var(--text-3xl);
-    font-weight: var(--font-weight-medium);
   }
   h2 {
     font-size: var(--text-2xl);
@@ -73,6 +82,9 @@
   }
   ol {
     @apply list-decimal list-outside ml-3 pl-3 py-1;
+  }
+  li{
+    @apply mb-1;
   }
   hr {
     @apply my-8;

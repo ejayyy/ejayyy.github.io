@@ -75,7 +75,7 @@ export default function InfinitePostList({
         <article key={post.slug} className="group">
           <Link href={`/blog/${post.slug}`} className="main-link">
             <div className="basis-2/3">
-              <h2 className="font-semibold">{post.title}</h2>
+              <h2 className="font-semibold my-0">{post.title}</h2>
               {post.spoiler && <span className="text-sm">{post.spoiler}</span>}
             </div>
             {post.date && (

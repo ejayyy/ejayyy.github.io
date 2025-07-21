@@ -21,9 +21,9 @@ export default async function Page({
     <div className="space-y-8">
       <div>
         {frontmatter.title && (
-          <h2 className="font-semibold text-gray-900 dark:text-white">
+          <h1 className="font-semibold text-gray-900 dark:text-white mt-0 mb-2">
             {frontmatter.title}
-          </h2>
+          </h1>
         )}
         {frontmatter.spoiler && (
           <small className="text-sm">{frontmatter.spoiler}</small>
