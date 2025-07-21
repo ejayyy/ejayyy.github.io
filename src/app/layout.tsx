@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_KR, Orbit, Source_Code_Pro } from "next/font/google";
-import ThemeToggle from "@/components/ThemeToggle";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const ibmPlexSansKR = IBM_Plex_Sans_KR({
@@ -39,8 +40,13 @@ export default function RootLayout({
       <body
         className={`${ibmPlexSansKR.variable} ${sourceCodePro.variable} ${orbit.variable} antialiased`}
       >
-        <ThemeToggle />
-        {children}
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <div className="max-w-3xl mx-auto px-4 py-8">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

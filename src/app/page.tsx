@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import matter from "gray-matter";
+import LaptopCatLight from "/public/laptop-cat-light.svg";
+import LaptopCatNight from "/public/laptop-cat-night.svg";
 
 export default async function Home() {
   const contentDir = path.join(process.cwd(), "src/app/content");
@@ -33,38 +35,36 @@ export default async function Home() {
     .sort((a, b) => b.date.getTime() - a.date.getTime());
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            My Blog
-          </h1>
-        </header>
-        <div className="space-y-6">
-          <div></div>
-          {sortedPosts.map((post) => (
-            <article key={post.slug} className="group">
-              <Link href={`/blog/${post.slug}`} className="main-link">
-                <div className="basis-2/3">
-                  <h2 className="font-semibold">{post.title}</h2>
-                  {post.spoiler && (
-                    <span className="text-sm">{post.spoiler}</span>
-                  )}
-                </div>
-                {post.date && (
-                  <time className="text-sm" dateTime={post.date.toISOString()}>
-                    {post.date.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </time>
-                )}
-              </Link>
-            </article>
-          ))}
-        </div>
+    <div className="space-y-6">
+      <div className="sm:w-90 sm:mr-3 sm:float-left sm:mb-0">
+        <LaptopCatLight
+          className="w-full h-full fill-slate-600 dark:hidden"
+          aria-label="Laptop Cat Logo"
+        />
+        <LaptopCatNight
+          className="w-full h-full fill-rose-200 hidden dark:block"
+          aria-label="Laptop Cat Logo"
+        />
       </div>
+      {sortedPosts.map((post) => (
+        <article key={post.slug} className="group">
+          <Link href={`/blog/${post.slug}`} className="main-link">
+            <div className="basis-2/3">
+              <h2 className="font-semibold">{post.title}</h2>
+              {post.spoiler && <span className="text-sm">{post.spoiler}</span>}
+            </div>
+            {post.date && (
+              <time className="text-sm" dateTime={post.date.toISOString()}>
+                {post.date.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
+            )}
+          </Link>
+        </article>
+      ))}
     </div>
   );
 }

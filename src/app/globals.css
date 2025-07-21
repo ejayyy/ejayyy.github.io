@@ -87,7 +87,7 @@
 }
 
 .main-link {
-  @apply text-slate-700 flex justify-between items-end max-w-1/2;
+  @apply text-slate-700 flex justify-between mx-auto items-end;
 
   @variant before {
     @apply bg-rose-500;
