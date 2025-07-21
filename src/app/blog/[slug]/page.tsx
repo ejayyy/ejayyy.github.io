@@ -4,6 +4,17 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { CustomPre, CustomCode } from "@/components/CodeBlock";
 
+export async function generateStaticParams() {
+  const contentDir = path.join(process.cwd(), "src/content");
+  const files = fs.readdirSync(contentDir);
+  
+  return files
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => ({
+      slug: file.replace(/\.mdx$/, ""),
+    }));
+}
+
 export default async function Page({
   params,
 }: {
