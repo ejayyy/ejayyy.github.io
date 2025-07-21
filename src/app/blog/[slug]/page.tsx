@@ -11,7 +11,7 @@ export default async function Page({
   const { slug } = await params;
 
   // Read the MDX file as raw text
-  const filePath = path.join(process.cwd(), "src/app/content", `${slug}.mdx`);
+  const filePath = path.join(process.cwd(), "src/content", `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");
 
   // Parse frontmatter and content

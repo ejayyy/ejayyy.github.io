@@ -18,7 +18,7 @@ export async function getPosts(page: number = 1, limit: number = 5): Promise<{
   hasMore: boolean;
   total: number;
 }> {
-  const contentDir = path.join(process.cwd(), "src/app/content");
+  const contentDir = path.join(process.cwd(), "src/content");
   const files = fs.readdirSync(contentDir);
 
   const allPosts = files
