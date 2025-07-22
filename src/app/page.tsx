@@ -1,8 +1,8 @@
-import { getAllPosts } from "../lib/posts";
-import { getPosts } from "../lib/client-utils";
+import { getAllPosts } from "@/lib/posts";
+import { getPosts } from "@/lib/client-utils";
 import LaptopCatLight from "/public/laptop-cat-light.svg";
 import LaptopCatNight from "/public/laptop-cat-night.svg";
-import InfinitePostList from "../components/InfinitePostList";
+import InfinitePostList from "@/components/InfinitePostList";
 import Header from "@/components/Header";
 
 export default async function Home() {
