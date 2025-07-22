@@ -1,11 +1,17 @@
-import { getPosts } from "./actions";
+import { getAllPosts } from "../lib/posts";
+import { getPosts } from "../lib/client-utils";
 import LaptopCatLight from "/public/laptop-cat-light.svg";
 import LaptopCatNight from "/public/laptop-cat-night.svg";
 import InfinitePostList from "../components/InfinitePostList";
 import Header from "@/components/Header";
 
 export default async function Home() {
-  const { posts: initialPosts, hasMore: initialHasMore } = await getPosts(1, 5);
+  const allPosts = getAllPosts();
+  const { posts: initialPosts, hasMore: initialHasMore } = getPosts(
+    allPosts,
+    1,
+    5
+  );
 
   return (
     <>
@@ -22,6 +28,7 @@ export default async function Home() {
           />
         </div>
         <InfinitePostList
+          allPosts={allPosts}
           initialPosts={initialPosts}
           initialHasMore={initialHasMore}
         />

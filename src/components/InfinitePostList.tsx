@@ -2,14 +2,16 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { getPosts, Post } from "../app/actions";
+import { getPosts, Post } from "../lib/client-utils";
 
 interface InfinitePostListProps {
+  allPosts: Post[];
   initialPosts: Post[];
   initialHasMore: boolean;
 }
 
 export default function InfinitePostList({
+  allPosts,
   initialPosts,
   initialHasMore,
 }: InfinitePostListProps) {
@@ -23,7 +25,7 @@ export default function InfinitePostList({
 
     setLoading(true);
     try {
-      const result = await getPosts(page, 5);
+      const result = getPosts(allPosts, page, 5);
       setPosts((prev) => [...prev, ...result.posts]);
       setHasMore(result.hasMore);
       setPage((prev) => prev + 1);
@@ -32,7 +34,7 @@ export default function InfinitePostList({
     } finally {
       setLoading(false);
     }
-  }, [page, loading, hasMore]);
+  }, [allPosts, page, loading, hasMore]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +104,9 @@ export default function InfinitePostList({
           <button
             onClick={loadMorePosts}
             className="font-semibold px-4 border-b-2 border-rose-600 dark:border-pink-400 hover:text-rose-600 dark:hover:text-pink-100 dark:hover:border-pink-100 "
-          >Do you want some more?</button>
+          >
+            Do you want some more?
+          </button>
         </div>
       )}
 
