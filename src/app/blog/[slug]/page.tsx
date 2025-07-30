@@ -3,12 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { CustomPre, CustomCode } from "@/components/CodeBlock";
+import Utterances from "@/components/Utterances";
 import remarkGfm from "remark-gfm";
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), "src/content");
   const files = fs.readdirSync(contentDir);
-  
+
   return files
     .filter((file) => file.endsWith(".mdx"))
     .map((file) => ({
@@ -60,14 +61,22 @@ export default async function Page({
         )}
       </div>
       <div className="prose prose-gray dark:prose-invert max-w-none">
-        <MDXRemote 
-          source={content} 
+        <MDXRemote
+          source={content}
           components={components}
           options={{
             mdxOptions: {
               remarkPlugins: [remarkGfm],
             },
           }}
+        />
+      </div>
+
+      <div className="border-t border-gray-200 dark:border-gray-700">
+        <Utterances
+          repo={process.env.NEXT_PUBLIC_UTTERANCES_REPO || ""}
+          issueTerm="pathname"
+          label={process.env.NEXT_PUBLIC_UTTERANCES_LABEL || "blog-comment"}
         />
       </div>
     </div>
