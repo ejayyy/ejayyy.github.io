@@ -6,7 +6,7 @@ import { CustomPre, CustomCode } from "@/components/CodeBlock";
 import Utterances from "@/components/Utterances";
 import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
-import { mergeKeywords } from "@/app/layout";
+import { mergeKeywords } from "@/lib/metadata-utils";
 
 // Helper function to get post data
 async function getPostData(slug: string) {

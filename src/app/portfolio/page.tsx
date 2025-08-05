@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import { mergeKeywords } from "@/app/layout";
+import { mergeKeywords } from "@/lib/metadata-utils";
 
 export const metadata: Metadata = {
   title: "Portfolio",
