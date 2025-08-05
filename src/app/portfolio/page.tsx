@@ -1,9 +1,28 @@
 import React from "react";
 import { Metadata } from "next";
+import { mergeKeywords } from "@/app/layout";
 
 export const metadata: Metadata = {
-  title: "Portfolio | My sweet little blog",
-  description: "프로젝트 포트폴리오",
+  title: "Portfolio",
+  description:
+    "웹 개발 프로젝트 포트폴리오 - PHP, Laravel, Vue.js, Java, Spring을 활용한 다양한 프로젝트 경험",
+  keywords: mergeKeywords([
+    "portfolio",
+    "web development",
+    "PHP",
+    "Laravel",
+    "Vue.js",
+    "Java",
+    "Spring",
+    "프로젝트",
+    "포트폴리오",
+  ]),
+  openGraph: {
+    title: "Portfolio",
+    description:
+      "웹 개발 프로젝트 포트폴리오 - PHP, Laravel, Vue.js, Java, Spring을 활용한 다양한 프로젝트 경험",
+    type: "website",
+  },
 };
 
 interface Project {
@@ -132,7 +151,11 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <li
               key={index}
-              className="border-b border-gray-200 dark:border-gray-700 pb-6"
+              className={
+                index !== projects.length - 1
+                  ? "border-b border-gray-200 dark:border-gray-700 pb-6"
+                  : ""
+              }
             >
               <h3 className="mb-0">{project.title}</h3>
               {project.sub && <small className="text-sm">{project.sub}</small>}

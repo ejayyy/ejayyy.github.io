@@ -5,6 +5,17 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { CustomPre, CustomCode } from "@/components/CodeBlock";
 import Utterances from "@/components/Utterances";
 import remarkGfm from "remark-gfm";
+import type { Metadata } from "next";
+import { mergeKeywords } from "@/app/layout";
+
+// Helper function to get post data
+async function getPostData(slug: string) {
+  const filePath = path.join(process.cwd(), "src/content", `${slug}.mdx`);
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  const { data: frontmatter, content } = matter(fileContent);
+
+  return { frontmatter, content };
+}
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), "src/content");
@@ -17,6 +28,47 @@ export async function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  try {
+    const { frontmatter } = await getPostData(slug);
+
+    const title = frontmatter.title
+      ? frontmatter.title
+      : "Blog Post";
+
+    const description = frontmatter.spoiler || "Welcome to my Journal";
+
+    // Merge base keywords with post-specific keywords from frontmatter
+    const keywords = mergeKeywords(frontmatter.tags);
+
+    return {
+      title,
+      description,
+      keywords,
+      openGraph: {
+        title: frontmatter.title || "Blog Post",
+        description,
+        type: "article",
+        publishedTime: frontmatter.date
+          ? new Date(frontmatter.date).toISOString()
+          : undefined,
+        authors: ["EJ"],
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Blog Post | My sweet little blog",
+      description: "Welcome to my Journal",
+    };
+  }
+}
+
 export default async function Page({
   params,
 }: {
@@ -24,12 +76,8 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  // Read the MDX file as raw text
-  const filePath = path.join(process.cwd(), "src/content", `${slug}.mdx`);
-  const fileContent = fs.readFileSync(filePath, "utf8");
-
-  // Parse frontmatter and content
-  const { data: frontmatter, content } = matter(fileContent);
+  // Get post data using the helper function
+  const { frontmatter, content } = await getPostData(slug);
 
   // MDX components for custom rendering
   const components = {
