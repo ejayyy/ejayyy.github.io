@@ -25,7 +25,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-ibm-plex-sans-kr);
+    font-family: "Asta Sans", sans-serif;
     transition: var(--transition-colors);
     @apply leading-7 antialiased;
   }
