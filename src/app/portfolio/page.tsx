@@ -37,7 +37,7 @@ export default function Portfolio() {
     {
       title: "주문 관리 시스템",
       sub: "내부 ERP 시스템의 MSA 전환",
-      env: ["Java 8", "Spring 4", "Kotlin", "Springboot 3", "MySQL", "Docker"],
+      env: ["Java 8", "Java 24", "Spring 4", "Springboot 3", "MySQL", "Docker"],
       desc: [
         "모놀리식 시스템의 확장성 한계 극복을 위한 MSA 구조 설계 및 파일럿 구축",
         "Jenkins 기반 CI/CD 도입 구상 및 코드 분리 전략 수립 주도",
