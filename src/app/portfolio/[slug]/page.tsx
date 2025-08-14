@@ -26,10 +26,10 @@ export async function generateMetadata({
 
   return {
     title: project.title,
-    description: project.description,
+    description: project.description[0] || project.title,
     openGraph: {
       title: project.title,
-      description: project.description,
+      description: project.description[0] || project.title,
       type: "article",
     },
   };
