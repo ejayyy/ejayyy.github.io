@@ -73,9 +73,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@100;200;300;700&family=Cascadia+Code:wght@200;300;500;700&display=swap"
           rel="stylesheet"
-          media="print"
-          // @ts-ignore
-          onLoad="this.media='all'"
         />
         <noscript>
           <link

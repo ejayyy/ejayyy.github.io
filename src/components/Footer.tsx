@@ -10,7 +10,7 @@ export default function Footer() {
         <Link href="https://github.com/ejayyy" target="_blank">
           Ejayyy
         </Link>{" "}
-        All pictures cannot be copied without permission.
+        All rights reserved.
       </p>
     </footer>
   );
