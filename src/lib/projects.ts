@@ -32,8 +32,8 @@ export const projects: Project[] = [
     description: [
       "모놀리식 시스템의 확장성 한계 극복을 위한 MSA 구조 설계 및 파일럿 구축",
       "도메인 주도 설계(DDD)를 적용하여 비즈니스 로직별 서비스 분리",
-      "레거시 코드 유지보수 체계화 및 OpenAPI 기반 문서화 시스템 구축",
-      "Jenkins 기반 CI/CD 도입 구상 및 코드 분리 전략 수립 주도",
+      "레거시 코드 유지보수 체계화",
+      "Jenkins 기반 CI/CD 도입 구상",
     ],
     slug: "order-management",
     images: [
