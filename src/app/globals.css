@@ -34,6 +34,14 @@
     transition: var(--transition-colors);
   }
 
+  ::selection {
+    @apply bg-lime-500 text-neutral-100;
+  }
+
+  ::-moz-selection {
+    @apply bg-lime-500 text-neutral-900;
+  }
+
   h1,
   h2,
   h3,
