@@ -7,6 +7,7 @@ import Utterances from "@/components/Utterances";
 import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
 import { mergeKeywords } from "@/lib/metadata-utils";
+import { JSX } from "react";
 
 // Helper function to get post data
 async function getPostData(slug: string) {
@@ -38,9 +39,7 @@ export async function generateMetadata({
   try {
     const { frontmatter } = await getPostData(slug);
 
-    const title = frontmatter.title
-      ? frontmatter.title
-      : "Blog Post";
+    const title = frontmatter.title ? frontmatter.title : "Blog Post";
 
     const description = frontmatter.spoiler || "Welcome to my Journal";
 
@@ -76,28 +75,61 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  // Get post data using the helper function
   const { frontmatter, content } = await getPostData(slug);
 
-  // MDX components for custom rendering
   const components = {
     pre: CustomPre,
     code: CustomCode,
     a: ({ href, children, ...props }: any) => {
-      // 외부 링크인지 확인 (http:// 또는 https://로 시작하는지)
-      const isExternal = href && (href.startsWith('http://') || href.startsWith('https://'))
-      
+      const isExternal =
+        href && (href.startsWith("http://") || href.startsWith("https://"));
       return (
-        <a 
-          href={href} 
-          target={isExternal ? '_blank' : undefined}
-          rel={isExternal ? 'noopener noreferrer' : undefined}
+        <a
+          href={href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
           {...props}
         >
           {children}
         </a>
-      )
-    }
+      );
+    },
+    ...(["h1", "h2", "h3", "h4", "h5", "h6"] as const).reduce((acc, tag) => {
+      acc[tag] = ({ children, ...props }: any) => {
+        const textContent =
+          typeof children === "string"
+            ? children
+            : Array.isArray(children)
+            ? children
+                .map((child) =>
+                  typeof child === "string"
+                    ? child
+                    : typeof child === "object" && child?.props?.children
+                    ? Array.isArray(child.props.children)
+                      ? child.props.children.join("")
+                      : child.props.children
+                    : ""
+                )
+                .join("")
+            : "";
+
+        const id = textContent
+          .toLowerCase()
+          .replace(/[^a-z0-9가-힣]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+        const Tag = tag as keyof JSX.IntrinsicElements;
+
+        return (
+          <Tag id={id} className="group relative" {...props}>
+            <a href={`#${id}`} aria-label={`${textContent} 섹션으로 링크`}>
+              #
+            </a>
+            {children}
+          </Tag>
+        );
+      };
+      return acc;
+    }, {} as any),
   };
 
   return (

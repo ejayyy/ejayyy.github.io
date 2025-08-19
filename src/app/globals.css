@@ -69,6 +69,23 @@
   h6 {
     font-size: var(--text-sm);
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply relative;
+
+    a[href^="#"] {
+      @apply absolute -left-6 top-0 text-inherit opacity-0 group-hover:opacity-100 transition-opacity duration-150;
+
+      @variant before {
+        @apply hidden;
+      }
+    }
+  }
+
   a {
     @apply relative no-underline text-indigo-600 transition-colors duration-300 ease-out;
 
