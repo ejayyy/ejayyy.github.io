@@ -78,7 +78,7 @@
     @apply relative;
 
     a[href^="#"] {
-      @apply absolute -left-6 top-0 text-inherit opacity-0 group-hover:opacity-100 transition-opacity duration-150;
+      @apply absolute -left-6 top-0 text-inherit opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150;
 
       @variant before {
         @apply hidden;
@@ -96,9 +96,11 @@
     @variant hover {
       @apply text-lime-600 before:w-full before:bg-lime-500;
     }
-
+    @variant focus {
+      @apply text-lime-600 before:w-full before:bg-lime-500;
+    }
     @variant dark {
-      @apply text-indigo-400 before:bg-lime-300 hover:text-lime-400 hover:before:bg-lime-300;
+      @apply text-indigo-400 before:bg-lime-300 hover:text-lime-400 hover:before:bg-lime-300 focus:text-lime-400 focus:before:bg-lime-300;
     }
   }
 
