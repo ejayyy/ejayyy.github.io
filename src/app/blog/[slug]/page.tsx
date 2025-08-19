@@ -83,6 +83,21 @@ export default async function Page({
   const components = {
     pre: CustomPre,
     code: CustomCode,
+    a: ({ href, children, ...props }: any) => {
+      // 외부 링크인지 확인 (http:// 또는 https://로 시작하는지)
+      const isExternal = href && (href.startsWith('http://') || href.startsWith('https://'))
+      
+      return (
+        <a 
+          href={href} 
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+          {...props}
+        >
+          {children}
+        </a>
+      )
+    }
   };
 
   return (
