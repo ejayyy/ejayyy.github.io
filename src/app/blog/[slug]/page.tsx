@@ -169,9 +169,9 @@ export default async function Page({
 
       <div className="border-t border-gray-200 dark:border-gray-700">
         <Utterances
-          repo={process.env.NEXT_PUBLIC_UTTERANCES_REPO || ""}
+          repo="ejayyy/ejayyy.github.io"
           issueTerm="pathname"
-          label={process.env.NEXT_PUBLIC_UTTERANCES_LABEL || "blog-comment"}
+          label="blog-comment"
         />
       </div>
     </div>
